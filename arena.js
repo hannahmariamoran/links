@@ -10,7 +10,6 @@ document.head.appendChild(markdownIt)
 let channelSlug = 'the-jazz-tapestry' // The “slug” is just the end of the URL
 
 
-
 // First, let’s lay out some *functions*, starting with our basic metadata:
 let placeChannelInfo = (data) => {
 	// Target some elements in your HTML:
@@ -25,7 +24,6 @@ let placeChannelInfo = (data) => {
 	channelCount.innerHTML = data.length
 	channelLink.href = `https://www.are.na/channel/${channelSlug}`
 }
-
 
 
 // Then our big function for specific-block-type rendering:
