@@ -20,6 +20,8 @@ html{
     --h2-line-height: 44px;
     --h3: 32px;
     --h3-line-height: 40px;
+    --h4: 20px;
+    --h4-line-height: 24px;
     --blockquote: 18px;
     --blockquote-line-height: 26px;
     --p: 16px;
@@ -73,6 +75,14 @@ h3{
     font-size: var(--figcaption);
     font-weight: 500;
     line-height: var(--figcaption-line-height);
+}
+
+h4{
+    color: var(--colour-blue);
+    font-family: "Mendl Sans";
+    font-size: var(--h4);
+    font-weight: 400;
+    line-height: var(--h4-line-height);
 }
 
 figcaption{
