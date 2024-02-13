@@ -42,11 +42,6 @@ body {
     margin: 20px;
 }
 
-/* nav styling */
-nav {
-    color: var(--colour-blue);
-}
-
 /* font styling */
 h1{
     font-family: Mendl Sans;
@@ -54,7 +49,7 @@ h1{
     line-height: var(--h1-line-height);
     font-weight: 300;
     text-transform: uppercase;
-    margin-top: 85px;
+    margin-top: 144px;
 }
 
 h2{
@@ -82,10 +77,6 @@ h4{
     font-size: var(--h4);
     font-weight: 300;
     line-height: var(--h4-line-height);
-    position: absolute;
-    top: -24px;
-    background-color: var(--colour-beige);
-    padding: 10px;
 }
 
 figcaption{
@@ -112,18 +103,28 @@ a{
     line-height: var(--a-line-height);
 }
 
+/* nav styling */
+nav {
+    color: var(--colour-blue);
+    position: fixed;
+    top: 20px;
+}
+
+/* header/intro section styling */
 .header-image{
     opacity: 75%;
     max-width: 75vw;
 }
-
 .header-image-collab{
     margin-top: 98px;
     position: relative;
 }
-
 .collab-text{
     margin-left: 29vw;
+    position: absolute;
+    top: -24px;
+    background-color: var(--colour-beige);
+    padding: 10px;
 }
 
 /* tablet media query */
