@@ -14,7 +14,7 @@ html{
 
 /* text variables */
 :root {
-    --h1: 74px;
+    --h1: 70px;
     --h1-line-height: 72px;
     --h2: 42px;
     --h2-line-height: 44px;
@@ -22,8 +22,8 @@ html{
     --h3-line-height: 40px;
     --h4: 20px;
     --h4-line-height: 24px;
-    --blockquote: 18px;
-    --blockquote-line-height: 26px;
+    --blockquote: 20px;
+    --blockquote-line-height: 24px;
     --p: 16px;
     --p-line-height: 20px;
     --a: 16px;
@@ -46,7 +46,6 @@ body {
 /* nav styling */
 nav {
     color: var(--colour-blue);
-    position: fixed;
 }
 
 /* font styling */
@@ -56,6 +55,7 @@ h1{
     line-height: var(--h1-line-height);
     font-weight: 300;
     text-transform: uppercase;
+    margin-top: 85px;
 }
 
 h2{
@@ -78,10 +78,10 @@ h3{
 }
 
 h4{
-    color: var(--colour-blue);
+    color: var(--colour-black);
     font-family: "Mendl Sans";
     font-size: var(--h4);
-    font-weight: 400;
+    font-weight: 300;
     line-height: var(--h4-line-height);
 }
 
@@ -107,6 +107,10 @@ a{
     font-size: var(--a);
     font-weight: 500;
     line-height: var(--a-line-height);
+}
+
+.header-image{
+    opacity: 75%;
 }
 
 /* tablet media query */
