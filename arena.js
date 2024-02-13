@@ -99,20 +99,21 @@ let renderBlock = (block) => {
 			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
 		}
 
-		// // Uploaded PDFs!
-		// else if (attachment.includes('pdf')) {
-		// 	let pdfItem =
-		// 		`
-		// 			<li>
-		// 				<a href="${block.attatchement.url}">
-		// 					<figure>
-		// 					<img src="${block.image.large.url}" alt="${block.title}">
-		// 					<figcaption>${block.title}</figcaption>
-		// 					</figure>
-		// 			</li>
-		// 		`
-		// 	channelBlocks.insertAdjacentHTML('beforeend', pdfItem)
-		// }
+		// Uploaded PDFs!
+		else if (attachment.includes('pdf')) {
+			let pdfItem =
+				`
+					<li>
+						<a href="${block.attachment.url}">
+							<figure>
+								<img src="${block.image.large.url}" alt="${block.title}">
+								<figcaption>${block.title}</figcaption>
+							</figure>
+						</a>
+					</li>
+				`
+			channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
+		}
 
 		// Uploaded audio!
 		else if (attachment.includes('audio')) {
