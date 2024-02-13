@@ -1,24 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/* These styles are just to make it easier to see the blocks, initially. */
+html{
+    scroll-behavior: smooth;
+}
+
+/* colour variables */
+:root {
+    --colour-black:#121111;
+    --colour-blue:#539FB0;
+    --colour-beige:#F9F5EE;
+
+}
+
+/* text variables */
+:root {
+    --h1: 74px;
+    --h1-line-height: 72px;
+    --h2: 32px;
+    --h2-line-height: 40px;
+    --blockquote: 18px;
+    --blockquote-line-height: 26px;
+    --p: 18px;
+    --p-line-height: 26px;
+    --a: 18px;
+    --a-line-height: 18px;
+}
+
+/* spacing variables */
+:root {
+    --spacing: 2em;
+}
 
 body {
-	--spacing: 2em;
-
-	font-family: monospace;
-	padding: var(--spacing);
+    background-color: var(--colour-beige);
+    gap: var(--spacing);
+    margin: 20px;
 }
 
-body, header, section, ul, li, footer, address {
-	display: grid;
-	gap: var(--spacing);
+/* nav styling */
+nav {
+    color: var(--colour-blue);
+    position: fixed;
+    font-size: 46px;
+}
+.menu{
+    position: fixed;
+    bottom: 0;
+    display: inline-block;
+    width: 100%;
 }
 
-main { max-width: 600px }
+/* font styling */
+h1{
+    font-family: Mendl Sans;
+    font-size: var(--h1);
+    line-height: var(--h1-line-height);
+    font-style: normal;
+    font-weight: 300;
+}
 
-a { color: blue; }
-em { font-style: italic; }
-strong { font-weight: bold; }
-p { max-width: 50ch; }
+/* tablet media query */
+@media (min-width: 640px) {
+    }
+
+/* desktop media query */
+@media (min-width: 1280px) {
+}
 
