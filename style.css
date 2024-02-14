@@ -93,6 +93,7 @@ p{
     font-size: var(--p);
     font-weight: 400;
     line-height: var(--p-line-height);
+    margin-top: var(--spacing);
 }
 
 a{
