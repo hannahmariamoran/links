@@ -141,7 +141,7 @@ img{
     width: 100vw;
 }
 
-/*having trouble with this as api pulls it in as a p tag*/
+/* having trouble with this as api pulls it in as a p tag */
 blockquote{
     font-family: Mendl Sans;
     font-size: var(--h1);
