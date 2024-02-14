@@ -68,7 +68,6 @@ let renderBlock = (block) => {
 
 	// Text!
 	else if (block.class == 'Text') {
-		console.log(block)
 		let textItem =
 			`
 				<li>
@@ -118,15 +117,15 @@ let renderBlock = (block) => {
 		// Uploaded audio!
 		else if (attachment.includes('audio')) {
 			// …still up to you, but here’s an `audio` element:
-			let audioItem =
+			console.log(block);
+			let audioItem = 
 				`
 				<li>
 					<p><em>Audio</em></p>
-					<audio controls src="${ block.attachment.url }"></video>
+					<audio controls src="${ block.attachment.url }"></audio>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
-			// More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
 		}
 	}
 
@@ -136,7 +135,6 @@ let renderBlock = (block) => {
 
 		// Linked video!
 		if (embed.includes('video')) {
-			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
 				`
 				<li>
@@ -145,12 +143,18 @@ let renderBlock = (block) => {
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
-			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
 		}
 
 		// Linked audio!
 		else if (embed.includes('rich')) {
-			// …up to you!
+			let linkedAudioItem =
+				`
+				<li>
+					<p><em>Linked Video</em></p>
+					${ block.embed.html }
+				</li>
+				`
+			channelBlocks.insertAdjacentHTML('beforeend', linkedAudioItem)
 		}
 	}
 }
