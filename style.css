@@ -24,7 +24,7 @@ html{
     --blockquote: 20px;
     --blockquote-line-height: 24px;
     --p: 16px;
-    --p-line-height: 20px;
+    --p-line-height: 24px;
     --a: 16px;
     --a-line-height: 18px;
     --figcaption: 18px;
@@ -126,6 +126,15 @@ nav {
     top: -24px;
     background-color: var(--colour-beige);
     padding: 10px;
+}
+#channel-description{
+    margin-top: 100px;
+}
+
+/* collection styling */
+.collection-title{
+    margin-top: 120px;
+    margin-bottom: 64px;
 }
 
 /* tablet media query */
