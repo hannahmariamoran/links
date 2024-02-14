@@ -4,14 +4,14 @@ html{
     scroll-behavior: smooth;
 }
 
-/* colour variables */
+/* ================================== colour variables ================================== */
 :root {
     --colour-black:#121111;
     --colour-blue:#539FB0;
     --colour-beige:#F9F5EE;
 }
 
-/* text variables */
+/* ================================== text variables ================================== */
 :root {
     --h1: 70px;
     --h1-line-height: 72px;
@@ -31,12 +31,12 @@ html{
     --figcaption-line-height:20px;
 }
 
-/* spacing variables */
+/* ================================== spacing variables ================================== */
 :root {
     --spacing: 1em;
 }
 
-/* font styling */
+/* ================================== font styling ================================== */
 h1{
     font-family: Mendl Sans;
     font-size: var(--h1);
@@ -90,22 +90,30 @@ a{
     font-weight: 500;
     line-height: var(--a-line-height);
 }
+/* ============== having trouble with this as api pulls it in as p tag ============== */
+blockquote{
+    font-family: Mendl Sans;
+    font-size: var(--h1);
+    line-height: var(--h1-line-height);
+    font-weight: 300;
+    margin-top: 144px;
+}
 
-/* content styling */
+/* ================================== content styling ================================== */
 body {
     background-color: var(--colour-beige);
     gap: var(--spacing);
     margin: 20px;
 }
 
-/* nav styling */
+/* ================================== nav styling ================================== */
 nav {
     color: var(--colour-blue);
     position: fixed;
     top: 20px;
 }
 
-/* header/intro section styling */
+/* ================================== header/intro section styling ================================== */
 .header-image{
     opacity: 75%;
     max-width: 75vw;
@@ -126,7 +134,7 @@ nav {
     z-index: 1;
 }
 
-/* collection styling */
+/* ================================== collection styling ================================== */
 .collection-title{
     margin-top: 120px;
     margin-bottom: 64px;
@@ -141,20 +149,11 @@ img{
     width: 100vw;
 }
 
-/* having trouble with this as api pulls it in as a p tag */
-blockquote{
-    font-family: Mendl Sans;
-    font-size: var(--h1);
-    line-height: var(--h1-line-height);
-    font-weight: 300;
-    margin-top: 144px;
-}
-
-/* tablet media query */
+/* ================================== tablet media query ================================== */
 @media (min-width: 640px) {
     }
 
-/* desktop media query */
+/* ================================== desktop media query ================================== */
 @media (min-width: 1280px) {
 }
 
