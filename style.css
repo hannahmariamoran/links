@@ -36,12 +36,6 @@ html{
     --spacing: 1em;
 }
 
-body {
-    background-color: var(--colour-beige);
-    gap: var(--spacing);
-    margin: 20px;
-}
-
 /* font styling */
 h1{
     font-family: Mendl Sans;
@@ -51,26 +45,21 @@ h1{
     text-transform: uppercase;
     margin-top: 144px;
 }
-
 h2{
     color: var(--colour-blue);
     font-family: "Mendl Sans";
     font-size: var(--h2);
     font-weight: 300;
     line-height: var(--h2)--h2-line-height;
-    text-align: center;
-    border-bottom: solid 1px;
-    border-top: solid 1px;
 }
-
 h3{
     color: var(--colour-blue);
     font-family: "Open Sans";
     font-size: var(--figcaption);
     font-weight: 500;
     line-height: var(--figcaption-line-height);
+    margin-top: var(--spacing);
 }
-
 h4{
     color: var(--colour-black);
     font-family: "Mendl Sans";
@@ -78,15 +67,14 @@ h4{
     font-weight: 300;
     line-height: var(--h4-line-height);
 }
-
 figcaption{
     color: var(--colour-blue);
     font-family: "Open Sans";
     font-size: var(--figcaption);
     font-weight: 500;
     line-height: var(--figcaption-line-height);
+    margin-top: var(--spacing);
 }
-
 p{
     color: var(--colour-black);
     font-family: "Open Sans";
@@ -95,13 +83,19 @@ p{
     line-height: var(--p-line-height);
     margin-top: var(--spacing);
 }
-
 a{
     color: var(--colour-blue);
     font-family: "Open Sans";
     font-size: var(--a);
     font-weight: 500;
     line-height: var(--a-line-height);
+}
+
+/* content styling */
+body {
+    background-color: var(--colour-beige);
+    gap: var(--spacing);
+    margin: 20px;
 }
 
 /* nav styling */
@@ -135,6 +129,24 @@ nav {
 .collection-title{
     margin-top: 120px;
     margin-bottom: 64px;
+    text-align: center;
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+}
+li{
+    margin-bottom: 100px;
+}
+img{
+    width: 100vw;
+}
+
+/* blockquote styling */
+blockquote{
+    font-family: Mendl Sans;
+    font-size: var(--h1);
+    line-height: var(--h1-line-height);
+    font-weight: 300;
+    margin-top: 144px;
 }
 
 /* tablet media query */
