@@ -191,6 +191,26 @@ img{
 
 /* ================================== tablet media query ================================== */
 @media (min-width: 640px) {
+    :root {
+        --h1: 64px;
+        --h1-line-height: 64px;
+        --h2: 27px;
+        --h2-line-height: 32px;
+        --h3: 32px;
+        --h3-line-height: 40px;
+        --h4: 32px;
+        --h4-line-height: 38px;
+        --h5: 20px;
+        --h5-line-height: 24px;
+        --blockquote: 20px;
+        --blockquote-line-height: 24px;
+        --p: 16px;
+        --p-line-height: 24px;
+        --a: 20px;
+        --a-line-height: 20px;
+        --figcaption: 18px;
+        --figcaption-line-height:20px;
+    }
     body {
         margin: 32px;
     }
@@ -200,17 +220,31 @@ img{
         align-items: flex-start;
         flex-direction: row;
     }
-     h1{
-        font-family: Mendl Sans;
-        font-size: 60px;
-        line-height: 64px;
-        font-weight: 300;
-        text-transform: uppercase;
-        color: var(--colour-blue);
+    h1{
         text-align: right;
-        }
-        
     }
+    /* ================================== intro section styling ================================== */
+    .intro-section{
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    }
+    .intro-image {
+    opacity: 50%;
+    grid-column: 4 / span 8; 
+    grid-row: 1 / span 6;
+    }
+    .collab-text {
+    grid-column: 1 / span 8; 
+    grid-row: 6;
+    }
+    #channel-description {
+    grid-column: 1 / span 5; 
+    grid-row: 6;
+    }
+}
 
 /* ================================== desktop media query ================================== */
 @media (min-width: 1280px) {
