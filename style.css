@@ -20,8 +20,8 @@ html{
     --h2-line-height: 32px;
     --h3: 32px;
     --h3-line-height: 40px;
-    --h4: 24px;
-    --h4-line-height: 28px;
+    --h4: 30px;
+    --h4-line-height: 36px;
     --h5: 20px;
     --h5-line-height: 24px;
     --blockquote: 20px;
@@ -96,8 +96,8 @@ p{
     margin-top: var(--spacing);
 }
 a{
-    color: var(--colour-blue);
-    font-family: "Mendl Sans";
+    color: var(--colour-grey);
+    font-family: "Work Sans";
     font-size: var(--a);
     font-weight: 400;
     line-height: var(--a-line-height);
@@ -139,6 +139,17 @@ nav {
     flex-direction: column;
     gap: 8px;
 }
+.options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+
 
 /* ================================== intro section styling ================================== */
 .intro-section{
@@ -155,7 +166,7 @@ nav {
 }
 
 .collab-text {
-    grid-column: 5 / span 7; 
+    grid-column: 3 / span 7; 
     grid-row: 1;
     z-index: 1; 
 }
@@ -169,18 +180,8 @@ nav {
     margin-top: 120px;
     text-align: center;
     border-bottom: solid 1px;
-    border-top: solid 1px;
     padding-top: 12px;
     padding-bottom: 12px;
-}
-.categories{
-    text-align: center;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-bottom: solid 1px #539FB0;
-    margin-bottom: 48px;
-    display: flex;
-    justify-content: space-between;
 }
 li{
     margin-bottom: 100px;
@@ -194,22 +195,22 @@ img{
     :root {
         --h1: 64px;
         --h1-line-height: 64px;
-        --h2: 27px;
-        --h2-line-height: 32px;
-        --h3: 32px;
-        --h3-line-height: 40px;
+        --h2: 32px;
+        --h2-line-height: 36px;
+        /* --h3: 32px;
+        --h3-line-height: 40px; */
         --h4: 32px;
         --h4-line-height: 38px;
         --h5: 20px;
         --h5-line-height: 24px;
-        --blockquote: 20px;
-        --blockquote-line-height: 24px;
+        /* --blockquote: 20px;
+        --blockquote-line-height: 24px; */
         --p: 16px;
         --p-line-height: 24px;
         --a: 20px;
         --a-line-height: 20px;
-        --figcaption: 18px;
-        --figcaption-line-height:20px;
+        /* --figcaption: 18px;
+        --figcaption-line-height:20px; */
     }
     body {
         margin: 32px;
@@ -223,6 +224,11 @@ img{
     h1{
         text-align: right;
     }
+
+    /* ================================== nav styling ================================== */
+    .options{
+    padding: 32px;
+    }
     /* ================================== intro section styling ================================== */
     .intro-section{
     margin-top: 120px;
@@ -233,18 +239,18 @@ img{
     }
     .intro-image {
     opacity: 50%;
-    grid-column: 4 / span 8; 
+    grid-column: 5 / span 9; 
     grid-row: 1 / span 6;
-    max-width: 50vw;
+    max-width: 45vw;
     }
     .collab-text {
-    grid-column: 1 / span 8; 
-    grid-row: 5;
+    grid-column: 2 / span 8; 
+    grid-row: 4;
     max-width: 62vw;
     }
     #channel-description {
-    grid-column: 1 / span 5; 
-    grid-row: 5;
+    grid-column: 2 / span 5; 
+    grid-row: 4;
     }
 }
 
@@ -259,14 +265,32 @@ img{
         align-items: flex-start;
         flex-direction: row;
     }
+    :root {
+        --h1: 80px;
+        --h1-line-height: 80px;
+        --h2: 36px;
+        --h2-line-height: 40px;
+        /* --h3: 32px;
+        --h3-line-height: 40px; */
+        --h4: 32px;
+        --h4-line-height: 38px;
+        --h5: 20px;
+        --h5-line-height: 24px;
+        /* --blockquote: 20px;
+        --blockquote-line-height: 24px; */
+        --p: 16px;
+        --p-line-height: 24px;
+        --a: 20px;
+        --a-line-height: 20px;
+        /* --figcaption: 18px;
+        --figcaption-line-height:20px; */
+    }
     h1{
-        font-family: Mendl Sans;
-        font-size: 80px;
-        line-height: 80px;
-        font-weight: 300;
-        text-transform: uppercase;
-        color: var(--colour-blue);
         text-align: right;
+    }
+     /* ================================== nav styling ================================== */
+     .options{
+        padding: 40px;
     }
     /* ================================== intro section styling ================================== */
     .intro-section{
@@ -278,18 +302,25 @@ img{
     }
     .intro-image {
         opacity: 50%;
-        grid-column: 5 / span 8; 
-        grid-row: 1 / span 5;
+        grid-column: 6 / span 8; 
+        grid-row: 1 / span 6;
         width: 33vw;
     }
     .collab-text {
-        grid-column: 2 / span 5; 
-        grid-row: 5;
+        grid-column: 3 / span 5; 
+        grid-row: 6;
     }
     #channel-description {
-        grid-column: 2 / span 4; 
-        grid-row: 5;
+        grid-column: 3 / span 5; 
+        grid-row: 6;
     }
-    
+    /* ================================== collection styling ================================== */
+    .collection-title{
+    margin-top: 180px;
+    text-align: left;
+    border-bottom: solid 1px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    }
 }
 
