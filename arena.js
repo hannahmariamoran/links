@@ -6,7 +6,7 @@ document.head.appendChild(markdownIt)
 
 
 
-// Okay, Are.na stuff!
+
 let channelSlug = 'the-jazz-tapestry' // The “slug” is just the end of the URL
 
 

@@ -9,6 +9,7 @@ html{
     --colour-black:#121111;
     --colour-blue:#539FB0;
     --colour-beige:#F9F5EE;
+    --colour-grey: #423F3F;
 }
 
 /* ================================== text variables ================================== */
@@ -19,14 +20,14 @@ html{
     --h2-line-height: 44px;
     --h3: 32px;
     --h3-line-height: 40px;
-    --h4: 20px;
-    --h4-line-height: 24px;
+    --h4: 24px;
+    --h4-line-height: 28px;
     --blockquote: 20px;
     --blockquote-line-height: 24px;
     --p: 16px;
     --p-line-height: 24px;
-    --a: 16px;
-    --a-line-height: 18px;
+    --a: 20px;
+    --a-line-height: 20px;
     --figcaption: 18px;
     --figcaption-line-height:20px;
 }
@@ -43,7 +44,8 @@ h1{
     line-height: var(--h1-line-height);
     font-weight: 300;
     text-transform: uppercase;
-    margin-top: 144px;
+    color: var(--colour-blue);
+    text-align: center;
 }
 h2{
     color: var(--colour-blue);
@@ -61,7 +63,7 @@ h3{
     margin-top: var(--spacing);
 }
 h4{
-    color: var(--colour-black);
+    color: var(--colour-grey);
     font-family: "Mendl Sans";
     font-size: var(--h4);
     font-weight: 300;
@@ -85,10 +87,13 @@ p{
 }
 a{
     color: var(--colour-blue);
-    font-family: "Open Sans";
+    font-family: "Mendl Sans";
     font-size: var(--a);
-    font-weight: 500;
+    font-weight: 400;
     line-height: var(--a-line-height);
+}
+.bold{
+    font-weight: 600;
 }
 /* ============== having trouble with this as api pulls it in as p tag ============== */
 blockquote{
@@ -105,15 +110,22 @@ body {
     gap: var(--spacing);
     margin: 20px;
 }
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
 
 /* ================================== nav styling ================================== */
 nav {
     color: var(--colour-blue);
-    position: fixed;
     top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-/* ================================== header/intro section styling ================================== */
+/* ================================== intro section styling ================================== */
 .header-image{
     opacity: 75%;
     max-width: 75vw;
@@ -125,9 +137,7 @@ nav {
 .collab-text{
     margin-left: 29vw;
     position: absolute;
-    top: -24px;
-    background-color: var(--colour-beige);
-    padding: 10px;
+    top: -30px;
 }
 #channel-description{
     margin-top: 100px;
@@ -151,9 +161,47 @@ img{
 
 /* ================================== tablet media query ================================== */
 @media (min-width: 640px) {
+    body {
+        margin: 32px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+     h1{
+        font-family: Mendl Sans;
+        font-size: 60px;
+        line-height: 64px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: var(--colour-blue);
+        text-align: right;
+        }
+        
     }
 
 /* ================================== desktop media query ================================== */
 @media (min-width: 1280px) {
+    body {
+        margin: 40px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    h1{
+        font-family: Mendl Sans;
+        font-size: 80px;
+        line-height: 80px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: var(--colour-blue);
+        text-align: right;
+    }
+    
 }
 
