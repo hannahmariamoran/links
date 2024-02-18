@@ -16,12 +16,14 @@ html{
 :root {
     --h1: 70px;
     --h1-line-height: 72px;
-    --h2: 42px;
-    --h2-line-height: 44px;
+    --h2: 27px;
+    --h2-line-height: 32px;
     --h3: 32px;
     --h3-line-height: 40px;
     --h4: 24px;
     --h4-line-height: 28px;
+    --h5: 20px;
+    --h5-line-height: 24px;
     --blockquote: 20px;
     --blockquote-line-height: 24px;
     --p: 16px;
@@ -39,7 +41,7 @@ html{
 
 /* ================================== font styling ================================== */
 h1{
-    font-family: Mendl Sans;
+    font-family: "Mendl Sans";
     font-size: var(--h1);
     line-height: var(--h1-line-height);
     font-weight: 300;
@@ -51,12 +53,12 @@ h2{
     color: var(--colour-blue);
     font-family: "Mendl Sans";
     font-size: var(--h2);
-    font-weight: 300;
-    line-height: var(--h2)--h2-line-height;
+    font-weight: 500;
+    line-height: var(--h2-h2-line-height);
 }
 h3{
     color: var(--colour-blue);
-    font-family: "Open Sans";
+    font-family: "Work Sans";
     font-size: var(--figcaption);
     font-weight: 500;
     line-height: var(--figcaption-line-height);
@@ -69,9 +71,17 @@ h4{
     font-weight: 300;
     line-height: var(--h4-line-height);
 }
+h5{
+    color: var(--colour-blue);
+    font-family: "Work Sans";
+    font-size: var(--h5);
+    font-weight: 400;
+    line-height: var(--h5-line-height);
+}
+
 figcaption{
     color: var(--colour-blue);
-    font-family: "Open Sans";
+    font-family: "Work Sans";
     font-size: var(--figcaption);
     font-weight: 500;
     line-height: var(--figcaption-line-height);
@@ -79,7 +89,7 @@ figcaption{
 }
 p{
     color: var(--colour-black);
-    font-family: "Open Sans";
+    font-family: "Work Sans";
     font-size: var(--p);
     font-weight: 400;
     line-height: var(--p-line-height);
@@ -95,6 +105,11 @@ a{
 .bold{
     font-weight: 600;
 }
+/* ============== hiding channel title api for the purpose to show styling choices ============== */
+#channel-title{
+    display: none;
+}
+
 /* ============== having trouble with this as api pulls it in as p tag ============== */
 blockquote{
     font-family: Mendl Sans;
@@ -126,31 +141,46 @@ nav {
 }
 
 /* ================================== intro section styling ================================== */
-.header-image{
-    opacity: 75%;
-    max-width: 75vw;
-}
-.header-image-collab{
+.intro-section{
     margin-top: 100px;
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
 }
-.collab-text{
-    margin-left: 29vw;
-    position: absolute;
-    top: -30px;
+.intro-image {
+    opacity: 50%;
+    grid-column: 1 / span 7; 
+    grid-row: 1;
 }
-#channel-description{
+
+.collab-text {
+    grid-column: 5 / span 7; 
+    grid-row: 1;
+    z-index: 1; 
+}
+
+#channel-description {
     margin-top: 100px;
-    z-index: 1;
 }
 
 /* ================================== collection styling ================================== */
 .collection-title{
     margin-top: 120px;
-    margin-bottom: 64px;
     text-align: center;
     border-bottom: solid 1px;
     border-top: solid 1px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.categories{
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: solid 1px #539FB0;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
 }
 li{
     margin-bottom: 100px;
