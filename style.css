@@ -162,24 +162,27 @@ nav {
 .intro-section{
     margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-gap: 20px;
     grid-auto-rows: minmax(100px, auto);
 }
 .intro-image {
     opacity: 50%;
-    grid-column: 1 / span 7; 
+    grid-column: 1 / span 8; 
     grid-row: 1;
+    max-width: 75vw;
 }
 
 .collab-text {
-    grid-column: 3 / span 7; 
+    grid-column: 5 / span 8; 
     grid-row: 1;
     z-index: 1; 
 }
 
 #channel-description {
     margin-top: 100px;
+    grid-column: 1 / span 8; 
+    grid-row: 2;
 }
 
 /* ================================== collection styling ================================== */
