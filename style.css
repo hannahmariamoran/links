@@ -16,7 +16,7 @@ html{
 :root {
     --h1: 70px;
     --h1-line-height: 72px;
-    --h2: 27px;
+    --h2: 28px;
     --h2-line-height: 32px;
     --h3: 32px;
     --h3-line-height: 40px;
@@ -28,7 +28,7 @@ html{
     --blockquote-line-height: 24px;
     --p: 16px;
     --p-line-height: 24px;
-    --a: 20px;
+    --a: 16px;
     --a-line-height: 20px;
     --figcaption: 18px;
     --figcaption-line-height:20px;
@@ -50,10 +50,10 @@ h1{
     text-align: center;
 }
 h2{
-    color: var(--colour-blue);
+    color: var(--colour-grey);
     font-family: "Mendl Sans";
     font-size: var(--h2);
-    font-weight: 500;
+    font-weight: 300;
     line-height: var(--h2-h2-line-height);
 }
 h3{
@@ -144,7 +144,7 @@ nav {
     top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
 }
 .options{
     display: flex;
@@ -162,42 +162,53 @@ nav {
 .intro-section{
     margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     grid-auto-rows: minmax(100px, auto);
 }
 .intro-image {
     opacity: 50%;
-    grid-column: 1 / span 8; 
+    grid-column: 1 / span 4; 
     grid-row: 1;
     max-width: 75vw;
 }
 
 .collab-text {
-    grid-column: 5 / span 8; 
+    grid-column: 3 / span 4; 
     grid-row: 1;
     z-index: 1; 
 }
 
 #channel-description {
     margin-top: 100px;
-    grid-column: 1 / span 8; 
+    grid-column: 1 / span 4; 
     grid-row: 2;
 }
 
-/* ================================== collection styling ================================== */
-.collection-title{
+/* ================================== archive section ================================== */
+.archive-section{
     margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+    grid-gap: 12px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+.square {
+    width: 20px; 
+    height: 20px;
+    background-color: #A4BEC2; 
+    z-index: -1;
+  }
+.archive-title{
     text-align: center;
-    border-bottom: solid 1px;
+    font-weight: 500;
+    /* border-bottom: solid 1px; */
     padding-top: 12px;
     padding-bottom: 12px;
-}
-li{
-    margin-bottom: 100px;
-}
-img{
-    width: 100vw;
+    grid-column: 1 / span 4; 
+    grid-row: 1;
 }
 
 /* ================================== tablet media query ================================== */
@@ -209,8 +220,8 @@ img{
         --h2-line-height: 36px;
         /* --h3: 32px;
         --h3-line-height: 40px; */
-        --h4: 32px;
-        --h4-line-height: 38px;
+        /* --h4: 32px;
+        --h4-line-height: 38px; */
         --h5: 20px;
         --h5-line-height: 24px;
         /* --blockquote: 20px;
@@ -282,8 +293,8 @@ img{
         --h2-line-height: 40px;
         /* --h3: 32px;
         --h3-line-height: 40px; */
-        --h4: 32px;
-        --h4-line-height: 38px;
+        /* --h4: 32px;
+        --h4-line-height: 38px; */
         --h5: 20px;
         --h5-line-height: 24px;
         /* --blockquote: 20px;
