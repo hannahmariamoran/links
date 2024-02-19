@@ -192,7 +192,6 @@ nav {
   display: flex;
   flex-direction: row;
   gap: 12px;
-  position: relative;
   align-items: center;
   justify-content: space-between;
 }
