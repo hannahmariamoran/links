@@ -4,15 +4,16 @@ html{
     scroll-behavior: smooth;
 }
 
-/* ================================== colour variables ================================== */
+/* ==========colour variables ========== */
 :root {
     --colour-black:#121111;
     --colour-blue:#539FB0;
     --colour-beige:#F9F5EE;
     --colour-grey: #423F3F;
+    --colour-light-bluegrey: #A4BEC2;
 }
 
-/* ================================== text variables ================================== */
+/* ========== text variables ========== */
 :root {
     --h1: 70px;
     --h1-line-height: 72px;
@@ -20,8 +21,8 @@ html{
     --h2-line-height: 32px;
     --h3: 32px;
     --h3-line-height: 40px;
-    --h4: 30px;
-    --h4-line-height: 36px;
+    --h4: 28px;
+    --h4-line-height: 32px;
     --h5: 20px;
     --h5-line-height: 24px;
     --blockquote: 20px;
@@ -34,12 +35,12 @@ html{
     --figcaption-line-height:20px;
 }
 
-/* ================================== spacing variables ================================== */
+/* ========== spacing variables ========== */
 :root {
     --spacing: 1em;
 }
 
-/* ================================== font styling ================================== */
+/* ========== type styling ========== */
 h1{
     font-family: "Mendl Sans";
     font-size: var(--h1);
@@ -53,7 +54,7 @@ h2{
     color: var(--colour-grey);
     font-family: "Mendl Sans";
     font-size: var(--h2);
-    font-weight: 300;
+    font-weight: 500;
     line-height: var(--h2-h2-line-height);
 }
 h3{
@@ -112,12 +113,13 @@ a:active{
 .bold{
     font-weight: 600;
 }
-/* ============== hiding channel title api for the purpose to show styling choices ============== */
+
+/* 🚨 hiding channel title api for the purpose to show styling choices 🚨 */
 #channel-title{
     display: none;
 }
 
-/* ============== having trouble with this as api pulls it in as p tag ============== */
+/* 🚨 having trouble with this as api pulls it in as p tag 🚨 */
 blockquote{
     font-family: Mendl Sans;
     font-size: var(--h1);
@@ -126,7 +128,7 @@ blockquote{
     margin-top: 144px;
 }
 
-/* ================================== content styling ================================== */
+/* ========== structure styling ========== */
 body {
     background-color: var(--colour-beige);
     gap: var(--spacing);
@@ -138,7 +140,7 @@ header {
     gap: 80px;
 }
 
-/* ================================== nav styling ================================== */
+/* ========== nav styling ========== */
 nav {
     color: var(--colour-blue);
     top: 20px;
@@ -157,8 +159,7 @@ nav {
     padding: 20px;
 }
 
-
-/* ================================== intro section styling ================================== */
+/* ========== intro section ========== */
 .intro-section{
     margin-top: 100px;
     display: grid;
@@ -185,12 +186,12 @@ nav {
     grid-row: 2;
 }
 
-/* ================================== archive section ================================== */
+/* ========== archive section ========== */
 .archive-section{
     margin-top: 120px;
     display: flex;
     flex-direction: row;
-    grid-gap: 12px;
+    gap: 12px;
     position: relative;
     align-items: center;
     justify-content: space-between;
@@ -198,17 +199,10 @@ nav {
 .square {
     width: 20px; 
     height: 20px;
-    background-color: #A4BEC2; 
-    z-index: -1;
-  }
+    background-color: var(--colour-light-bluegrey); 
+}
 .archive-title{
     text-align: center;
-    font-weight: 500;
-    /* border-bottom: solid 1px; */
-    padding-top: 12px;
-    padding-bottom: 12px;
-    grid-column: 1 / span 4; 
-    grid-row: 1;
 }
 
 /* ================================== tablet media query ================================== */
@@ -217,11 +211,11 @@ nav {
         --h1: 64px;
         --h1-line-height: 64px;
         --h2: 32px;
-        --h2-line-height: 36px;
+        --h2-line-height: 34px;
         /* --h3: 32px;
         --h3-line-height: 40px; */
-        /* --h4: 32px;
-        --h4-line-height: 38px; */
+        --h4: 28px;
+        --h4-line-height: 33px;
         --h5: 20px;
         --h5-line-height: 24px;
         /* --blockquote: 20px;
@@ -246,11 +240,12 @@ nav {
         text-align: right;
     }
 
-    /* ================================== nav styling ================================== */
+    /* ========== nav styling ========== */
     .options{
     padding: 32px;
     }
-    /* ================================== intro section styling ================================== */
+
+    /* ========== intro section ========== */
     .intro-section{
     margin-top: 120px;
     display: grid;
@@ -261,7 +256,7 @@ nav {
     .intro-image {
     opacity: 50%;
     grid-column: 5 / span 9; 
-    grid-row: 1 / span 6;
+    grid-row: 1 / span 4;
     max-width: 45vw;
     }
     .collab-text {
@@ -272,6 +267,18 @@ nav {
     #channel-description {
     grid-column: 2 / span 5; 
     grid-row: 4;
+    }
+
+    /* ========== archive section ========== */
+    .archive-section{
+    margin-top: 140px;
+    gap: 16px;
+    justify-content: left;
+    margin-left: 85px;
+    }
+    .horizontal-line {
+        border: solid 0.5px var(--colour-blue);
+        width: 40px;
     }
 }
 
