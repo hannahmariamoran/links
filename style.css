@@ -75,6 +75,7 @@ a{
 a:hover{
   color: var(--colour-blue);
   font-weight: 600;
+  transition: 0.2s;
 }
 a:active{
   color: var(--colour-blue);
