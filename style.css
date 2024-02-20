@@ -64,7 +64,6 @@ p{
   font-size: var(--p);
   font-weight: 400;
   line-height: var(--p-line-height);
-  margin-top: var(--spacing);
 }
 a{
   color: var(--colour-grey);
@@ -199,6 +198,16 @@ li{
 }
 .block{
   background-color: red; 
+}
+.block--text{
+  background-color: blue; 
+  padding: 20px;
+}
+.block--text p{
+  font-family: Mendl Sans;
+  font-size: var(--blockquote);
+  line-height: var(--blockquote);
+  font-weight: 300;
 }
 /* ========== hide channel count ========== */
 #channel-count{

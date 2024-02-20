@@ -36,7 +36,6 @@ let renderBlock = (block) => {
 
 	// Links!
 	if (block.class == 'Link') {
-		console.log(block)
 		let linkItem =
 			`
 			<li class="block block--link">
