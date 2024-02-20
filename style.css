@@ -58,6 +58,14 @@ h4{
   font-weight: 300;
   line-height: var(--h4-line-height);
 }
+h4:hover{
+  color: var(--colour-blue);
+  font-weight: 500;
+  transition: 0.1s;
+}
+h4:active{
+  color: var(--colour-blue);
+}
 p{
   color: var(--colour-black);
   font-family: "Work Sans";
