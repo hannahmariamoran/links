@@ -194,3 +194,20 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
 	})
+
+// –––––––––– Are.na description fading in on scroll up ––––––––––
+let highlightClass = 'highlight' 
+let highlightBlock = document.querySelector('aside')
+
+// Set up an IntersectionObserver.
+let sectionObserver = new IntersectionObserver((entries) => {
+	let [entry] = entries 
+
+	if (entry.isIntersecting) {
+		highlightBlock.classList.add(highlightClass)
+	} else {
+		highlightBlock.classList.remove(highlightClass)
+	}
+})
+
+sectionObserver.observe(highlightBlock) 

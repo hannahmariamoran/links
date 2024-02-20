@@ -100,6 +100,9 @@ a:hover{
 a:active{
   color: var(--colour-blue);
 }
+.bold{
+  font-weight: 600;
+}
 
 /* 🚨 hiding channel title api for the purpose to show styling choices 🚨 */
 #channel-title{
@@ -158,10 +161,22 @@ nav {
   grid-row: 1;
   max-width: 75vw;
 }
+.intro-image:hover{
+  transform: rotate(-15deg);
+  transition: transform 0.5s ease-in-out;
+}
 .collab-text-position {
   grid-column: 3 / span 4; 
   grid-row: 1;
   z-index: 1; 
+}
+aside {
+	transition: all 3s ease-in-out; 
+	will-change: transform; 
+  opacity: 0%;
+}
+aside.highlight { 
+  opacity: 100%;
 }
 #channel-description {
   margin-top: 100px;
