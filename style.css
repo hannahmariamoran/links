@@ -19,8 +19,6 @@ html{
   --h1-line-height: 72px;
   --h2: 28px;
   --h2-line-height: 32px;
-  /* --h3: 32px;
-  --h3-line-height: 40px; */
   --h4: 28px;
   --h4-line-height: 32px;
   --blockquote: 20px;
@@ -29,8 +27,6 @@ html{
   --p-line-height: 24px;
   --a: 16px;
   --a-line-height: 20px;
-  /* --figcaption: 18px;
-  --figcaption-line-height:20px; */
 }
 
 /* ========== spacing variables ========== */
@@ -55,14 +51,6 @@ h2{
   font-weight: 500;
   line-height: var(--h2-line-height);
 }
-/* h3{
-  color: var(--colour-blue);
-  font-family: "Work Sans";
-  font-size: var(--figcaption);
-  font-weight: 500;
-  line-height: var(--figcaption-line-height);
-  margin-top: var(--spacing);
-} */
 h4{
   color: var(--colour-grey);
   font-family: "Mendl Sans";
@@ -70,14 +58,6 @@ h4{
   font-weight: 300;
   line-height: var(--h4-line-height);
 }
-/* figcaption{
-  color: var(--colour-blue);
-  font-family: "Work Sans";
-  font-size: var(--figcaption);
-  font-weight: 500;
-  line-height: var(--figcaption-line-height);
-  margin-top: var(--spacing);
-} */
 p{
   color: var(--colour-black);
   font-family: "Work Sans";
@@ -212,9 +192,11 @@ ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 60px;
+  list-style: none;
 }
 li{
   grid-column: 1 / span 4; 
+  background-color: red; 
 }
 /* ========== hide channel count ========== */
 #channel-count{
@@ -227,6 +209,7 @@ footer{
   align-items: left;
   border-top: solid 1px var(--colour-blue);
   padding-top: 12px;
+  margin-top: 120px;
 }
 
 /* ================================== tablet media query ================================== */
@@ -237,16 +220,12 @@ footer{
     --h1-line-height: 64px;
     --h2: 32px;
     --h2-line-height: 34px;
-    /* --h3: 32px;
-    --h3-line-height: 40px; */
     --h4: 28px;
     --h4-line-height: 33px;
     --p: 16px;
     --p-line-height: 24px;
     --a: 16px;
     --a-line-height: 20px;
-    /* --figcaption: 18px;
-    --figcaption-line-height:20px; */
   }
   /* ========== structure styling ========== */
   body {
@@ -301,9 +280,8 @@ footer{
   }
   /* ========== block styling ========== */
   ul {
-    display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-gap: 60px;
+    grid-gap: 80px;
   }
   li{
     grid-column: 1 / span 4; 
@@ -314,6 +292,7 @@ footer{
   /* ========== footer ========== */
   footer{
     padding-top: 16px;
+    margin-top: 180px;
   }
 }
 
@@ -325,16 +304,12 @@ footer{
     --h1-line-height: 80px;
     --h2: 40px;
     --h2-line-height: 40px;
-    /* --h3: 32px;
-    --h3-line-height: 40px; */
     --h4: 36px;
     --h4-line-height: 48px;
     --p: 20px;
     --p-line-height: 28px;
      --a: 20px;
     --a-line-height: 20px;
-    /* --figcaption: 18px;
-    --figcaption-line-height:20px; */
   }
   /* ========== structure styling ========== */
   body {
@@ -391,9 +366,8 @@ footer{
   }
   /* ========== block styling ========== NOTE - how do I use child function so every third is included*/
   ul {
-    display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 60px;
+    grid-gap: 120px;
   }
   li{
     grid-column: 1 / span 5;
@@ -404,6 +378,7 @@ footer{
   /* ========== footer ========== */
   footer{
     padding-top: 20px;
+    margin-top: 240px;
   }
 }
 

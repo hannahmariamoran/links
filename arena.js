@@ -38,28 +38,24 @@ let renderBlock = (block) => {
 		let linkItem =
 			`
 			<li>
-				<p><em>Link</em></p>
 				<picture>
 					<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
 					<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
 					<img src="${ block.image.original.url }">
 				</picture>
-				<h3>${ block.title }</h3>
-				${ block.description_html }
 				<p><a href="${ block.source.url }">See the original ↗</a></p>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 	}
 
-	// Images!
+	// Images! - if I want to put figcaption back in - <figcaption>${block.title}</figcaption> under img
 	else if (block.class == 'Image') {
 		let imageItem =
 			`
 				<li>
 					<figure>
 					<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
-					<figcaption>${block.title}</figcaption>
 					</figure>
 				</li>
 			`
@@ -89,7 +85,6 @@ let renderBlock = (block) => {
 			let videoItem =
 				`
 				<li>
-					<p><em>Video</em></p>
 					<video controls src="${ block.attachment.url }"></video>
 				</li>
 				`
@@ -106,7 +101,6 @@ let renderBlock = (block) => {
 						<a href="${block.attachment.url}">
 							<figure>
 								<img src="${block.image.large.url}" alt="${block.title}">
-								<figcaption>${block.title}</figcaption>
 							</figure>
 						</a>
 					</li>
@@ -121,7 +115,6 @@ let renderBlock = (block) => {
 			let audioItem = 
 				`
 				<li>
-					<p><em>Audio</em></p>
 					<audio controls src="${ block.attachment.url }"></audio>
 				</li>
 				`
@@ -138,7 +131,6 @@ let renderBlock = (block) => {
 			let linkedVideoItem =
 				`
 				<li>
-					<p><em>Linked Video</em></p>
 					${ block.embed.html }
 				</li>
 				`
@@ -150,7 +142,6 @@ let renderBlock = (block) => {
 			let linkedAudioItem =
 				`
 				<li>
-					<p><em>Linked Video</em></p>
 					${ block.embed.html }
 				</li>
 				`
