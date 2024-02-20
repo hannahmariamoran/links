@@ -53,7 +53,7 @@ h2{
   font-family: "Mendl Sans";
   font-size: var(--h2);
   font-weight: 500;
-  line-height: var(--h2-h2-line-height);
+  line-height: var(--h2-line-height);
 }
 /* h3{
   color: var(--colour-blue);
@@ -252,7 +252,7 @@ footer{
     grid-row: 1 / span 4;
     max-width: 45vw;
   }
-  .collab-text {
+  .collab-text-position {
     grid-column: 2 / span 8; 
     grid-row: 4;
     max-width: 62vw;
@@ -328,7 +328,7 @@ footer{
     grid-row: 1 / span 6;
     width: 33vw;
   }
-  .collab-text {
+  .collab-text-position {
     grid-column: 3 / span 5; 
     grid-row: 5;
   }
