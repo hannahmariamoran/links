@@ -192,6 +192,19 @@ nav {
 .archive-title{
   text-align: center;
 }
+/* ========== block styling ========== */
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 60px;
+}
+li{
+  grid-column: 1 / span 4; 
+}
+/* ========== hide channel count ========== */
+#channel-count{
+  display: none;
+}
 /* ========== footer ========== */
 footer{
   display: flex;
@@ -271,6 +284,18 @@ footer{
     border: solid 0.5px var(--colour-blue);
     width: 30px;
   }
+  /* ========== block styling ========== */
+  ul {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 60px;
+  }
+  li{
+    grid-column: 1 / span 4; 
+  }
+  li:nth-child(2n) {
+    grid-column: 5 / span 4;
+  }
   /* ========== footer ========== */
   footer{
     padding-top: 16px;
@@ -348,6 +373,18 @@ footer{
   .square {
     width: 24px; 
     height: 24px;
+  }
+  /* ========== block styling ========== NOTE - how do I use child function so every third is included*/
+  ul {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 60px;
+  }
+  li{
+    grid-column: 1 / span 5;
+  }
+  li:nth-child(2n) {
+    grid-column: 7 / span 5;
   }
   /* ========== footer ========== */
   footer{
