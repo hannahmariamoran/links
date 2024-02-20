@@ -342,6 +342,9 @@ footer{
   }
   li{
     grid-column: 1 / span 4; 
+    /* width: 384px;
+    height: 384px; */
+    margin-top: 32px;
   }
   li:nth-child(2n) {
     grid-column: 5 / span 4;
