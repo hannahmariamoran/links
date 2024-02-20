@@ -174,7 +174,7 @@ aside.highlight {
 /* ========== archive section ========== */
 .archive-section{
   margin-top: 120px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   display: flex;
   flex-direction: row;
   gap: 12px;
@@ -212,7 +212,7 @@ li{
   flex-direction: column;
 }
 /* ====== text blocks ====== */
-.block--text{
+/* .block--text{
   background-color: var(--colour-light-bluegrey); 
 }
 .block--text p{
@@ -222,7 +222,7 @@ li{
   line-height: var(--blockquote-line-height);
   font-weight: 300;
   padding: 20px;
-}
+} */
 /* ====== link blocks ====== */
 .block--link{
   width: 335px;
@@ -318,6 +318,7 @@ footer{
   /* ========== archive section ========== */
   .archive-section{
     margin-top: 140px;
+    margin-bottom: 80px;
     gap: 12px;
     justify-content: left;
   }
@@ -334,29 +335,20 @@ footer{
     grid-column: 1 / span 4; 
   }
   li:nth-child(2n) {
-    grid-column: 3 / span 2;
+    grid-column: 5 / span 4;
   }
   .block{
     background-color: red;
     display: flex;
-    gap: 32px;
+    gap: 20px;
     flex-direction: column;
-    margin-top: 80px;
-    width: 385px;
-    height: 385px;
+    align-items: flex-end;
+  }
+  /* ====== link blocks ====== */
+  .block--link{
+    width: 335px;
+    height: 335px;
     overflow: hidden;
-  }
-  /* ====== text blocks ====== */
-  .block--text{
-  background-color: var(--colour-light-bluegrey); 
-  }
-  .block--text p{
-  color: var(--colour-grey);
-  font-family: Mendl Sans;
-  font-size: var(--blockquote);
-  line-height: var(--blockquote-line-height);
-  font-weight: 300;
-  padding: 20px;
   }
   /* ========== footer ========== */
   footer{
@@ -423,6 +415,7 @@ footer{
   /* ========== archive section ========== */
   .archive-section{
     margin-top: 240px;
+    margin-bottom: 160px;
     justify-content: left;
   }
   .horizontal-line {
@@ -433,16 +426,41 @@ footer{
     width: 24px; 
     height: 24px;
   }
-  /* ========== block styling ========== NOTE - how do I use child function so every third is included*/
-  ul {
+   /* =============== block styling =============== */
+   ul {
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 120px;
+    grid-gap: 40px;
   }
   li{
-    grid-column: 1 / span 5;
+    grid-column: 1 / span 4; 
   }
   li:nth-child(2n) {
-    grid-column: 7 / span 5;
+    grid-column: 5 / span 4;
+  }
+  li:nth-child(3n) {
+    grid-column: 9 / span 4;
+  }
+  .block{
+    background-color: red;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  /* ====== link blocks ====== */
+  .block--link{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  /* ====== curator info ====== */
+  .block-curator{
+    padding-top: 12px;
+    padding-left: 12px;
+    grid-column: 1 / span 2; 
+    border-left: solid 1px var(--colour-blue); 
+    border-top: solid 1px var(--colour-blue);
+    width: 250px;
   }
   /* ========== footer ========== */
   footer{
