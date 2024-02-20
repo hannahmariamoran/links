@@ -261,7 +261,7 @@ footer{
   }
   .intro-image {
     opacity: 50%;
-    grid-column: 5 / span 9; 
+    grid-column: 5 / span 4; 
     grid-row: 1 / span 4;
     max-width: 45vw;
   }
