@@ -199,13 +199,12 @@ aside.highlight {
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 80px;
   list-style: none;
 }
 li{
   grid-column: 1 / span 4; 
-  width: 335px;
-  height: 335px;
+  width: 100%;
+  height: 100%;
   margin-bottom: 60px;
 }
 .block{
@@ -217,13 +216,13 @@ li{
 }
 /* ====== link blocks ====== */
 .block--link{
-  width: 335px;
-  height: 335px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   display: block;
 }
 /* ====== text blocks ====== */
-.block--text{
+/* .block--text{
   background-color: var(--colour-light-bluegrey); 
   width: 335px;
   max-width: 500px;
@@ -238,9 +237,14 @@ li{
   line-height: var(--blockquote-line-height);
   font-weight: 300;
   padding: 20px;
+} */
+/* ====== image blocks ====== */
+.block--image{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
 }
-/* ====== pdf blocks ====== */
-
 /* ====== curator info ====== */
 .block-curator{
   padding-top: 12px;
@@ -265,7 +269,7 @@ footer{
 }
 
 /* ================================== tablet media query ================================== */
-@media (min-width: 640px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   /* ========== type variables ========== */
   :root {
     --h1: 64px;
@@ -327,7 +331,6 @@ footer{
   /* ========== archive section ========== */
   .archive-section{
     margin-top: 140px;
-    margin-bottom: 80px;
     gap: 12px;
     justify-content: left;
   }
@@ -337,14 +340,16 @@ footer{
   }
   /* =============== block styling =============== */
   ul {
+    display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-gap: 32px;
+    list-style: none;
   }
   li{
     grid-column: 1 / span 4; 
-    /* width: 384px;
-    height: 384px; */
-    margin-top: 32px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
   }
   li:nth-child(2n) {
     grid-column: 5 / span 4;
@@ -354,12 +359,14 @@ footer{
     display: flex;
     gap: 20px;
     flex-direction: column;
+    container: fill;
   }
   /* ====== link blocks ====== */
   .block--link{
-    width: 384px;
-    height: 384px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+    display: block;
   }
   /* ========== footer ========== */
   footer{
@@ -369,7 +376,7 @@ footer{
 }
 
 /* ================================== desktop media query ================================== */
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   /* ========== type variables ========== */
   :root {
     --h1: 80px;
@@ -426,7 +433,6 @@ footer{
   /* ========== archive section ========== */
   .archive-section{
     margin-top: 240px;
-    margin-bottom: 140px;
     justify-content: left;
   }
   .horizontal-line {
@@ -437,13 +443,18 @@ footer{
     width: 24px; 
     height: 24px;
   }
-   /* =============== block styling =============== */
-   ul {
+  /* =============== block styling =============== */
+  ul {
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 40px;
+    grid-gap: 32px;
+    list-style: none;
   }
   li{
     grid-column: 1 / span 4; 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
   }
   li:nth-child(2n) {
     grid-column: 5 / span 4;
@@ -456,22 +467,17 @@ footer{
     display: flex;
     gap: 20px;
     flex-direction: column;
-    width: 300px;
-    height: 300px;
+    container: fill;
   }
   /* ====== link blocks ====== */
   .block--link{
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+    display: block;
   }
   /* ====== curator info ====== */
   .block-curator{
-    padding-top: 12px;
-    padding-left: 12px;
-    grid-column: 1 / span 2; 
-    border-left: solid 1px var(--colour-blue); 
-    border-top: solid 1px var(--colour-blue);
     width: 250px;
   }
   /* ========== footer ========== */

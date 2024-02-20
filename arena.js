@@ -54,37 +54,37 @@ let renderBlock = (block) => {
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 	}
 
-	// // Images! - if I want to put figcaption back in - <figcaption>${block.title}</figcaption> under img
-	// else if (block.class == 'Image') {
-	// 	let imageItem =
-	// 		`
-	// 		<li class="block block--image">
-	// 			<figure>
-	// 			<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
-	// 			</figure>
-	// 		</li>
-	// 		<li>
-	// 			<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-	// 		</li>
-	// 		`
-	// 	channelBlocks.insertAdjacentHTML('beforeend', imageItem)
-	// }
-
-	// Text!
-	else if (block.class == 'Text') {
-		let textItem =
+	// Images! - if I want to put figcaption back in - <figcaption>${block.title}</figcaption> under img
+	else if (block.class == 'Image') {
+		let imageItem =
 			`
 			<li>
-				<div class="block">
-				<blockquote class="block--text">
-					${block.content_html}
-				</blockquote>
+			<div class="block">	
+				<figure class="block block--image">
+				<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
+				</figure>
 				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-				</div>
+			</div>
 			</li>
 			`
-		channelBlocks.insertAdjacentHTML('beforeend', textItem)
+		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
 	}
+
+	// Text!
+	// else if (block.class == 'Text') {
+	// 	let textItem =
+	// 		`
+	// 		<li>
+	// 			<div class="block">
+	// 			<blockquote class="block--text">
+	// 				${block.content_html}
+	// 			</blockquote>
+	// 			<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+	// 			</div>
+	// 		</li>
+	// 		`
+	// 	channelBlocks.insertAdjacentHTML('beforeend', textItem)
+	// }
 
 	// // Uploaded (not linked) media…
 	// else if (block.class == 'Attachment') {
