@@ -199,7 +199,7 @@ aside.highlight {
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 80px;
   list-style: none;
 }
 li{
@@ -207,16 +207,13 @@ li{
 }
 .block{
   background-color: red;
-  width: 335px;
-  height: 335px;
-  overflow: hidden;
   display: flex;
-  margin-top: 80px;
+  gap: 20px;
+  flex-direction: column;
 }
 /* ====== text blocks ====== */
 .block--text{
   background-color: var(--colour-light-bluegrey); 
-  padding: 20px;
 }
 .block--text p{
   color: var(--colour-grey);
@@ -224,20 +221,25 @@ li{
   font-size: var(--blockquote);
   line-height: var(--blockquote-line-height);
   font-weight: 300;
+  padding: 20px;
 }
 /* ====== link blocks ====== */
 .block--link{
+  width: 335px;
+  height: 335px;
+  overflow: hidden;
 }
 /* ====== image blocks ====== */
-.block--image{
-}
+/* ====== pdf blocks ====== */
+
 /* ====== curator info ====== */
 .block-curator{
-  padding-left: 12px;
   padding-top: 12px;
+  padding-left: 12px;
   grid-column: 1 / span 2; 
   border-left: solid 1px var(--colour-blue); 
-  border-top: solid 1px var(--colour-blue); 
+  border-top: solid 1px var(--colour-blue);
+  width: 200px;
 }
 /* ========== hide channel count ========== */
 #channel-count{
@@ -261,8 +263,12 @@ footer{
     --h1-line-height: 64px;
     --h2: 32px;
     --h2-line-height: 34px;
+    --h3: 18px;
+    --h3-line-height: 22px;
     --h4: 28px;
     --h4-line-height: 33px;
+    --blockquote: 28px;
+    --blockquote-line-height: 34px;
     --p: 16px;
     --p-line-height: 24px;
     --a: 16px;
@@ -319,16 +325,38 @@ footer{
     border: solid 0.5px var(--colour-blue);
     width: 30px;
   }
-  /* ========== block styling ========== */
+  /* =============== block styling =============== */
   ul {
     grid-template-columns: repeat(8, 1fr);
-    grid-gap: 80px;
+    grid-gap: 32px;
   }
   li{
     grid-column: 1 / span 4; 
   }
   li:nth-child(2n) {
-    grid-column: 5 / span 4;
+    grid-column: 3 / span 2;
+  }
+  .block{
+    background-color: red;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    margin-top: 80px;
+    width: 385px;
+    height: 385px;
+    overflow: hidden;
+  }
+  /* ====== text blocks ====== */
+  .block--text{
+  background-color: var(--colour-light-bluegrey); 
+  }
+  .block--text p{
+  color: var(--colour-grey);
+  font-family: Mendl Sans;
+  font-size: var(--blockquote);
+  line-height: var(--blockquote-line-height);
+  font-weight: 300;
+  padding: 20px;
   }
   /* ========== footer ========== */
   footer{
