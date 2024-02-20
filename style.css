@@ -196,6 +196,8 @@ ul {
 }
 li{
   grid-column: 1 / span 4; 
+}
+.block{
   background-color: red; 
 }
 /* ========== hide channel count ========== */

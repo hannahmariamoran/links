@@ -36,22 +36,24 @@ let renderBlock = (block) => {
 
 	// Links!
 	if (block.class == 'Link') {
-		console.log(block.dateadded)
+		console.log(block)
 		let linkItem =
 			`
 			<li class="block block--link">
+				<a href="${ block.source.url }">
 				<picture>
 					<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
 					<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
 					<img src="${ block.image.original.url }">
 				</picture>
-				<p><a href="${ block.source.url }">See the original ↗</a></p>
+				</a>
+				<h3>Curated by <br>${block.connected_by_username}</h3>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 	}
 
-	// Images! - if I want to put figcaption back in - <figcaption>${block.title}</figcaption> under img
+	// // Images! - if I want to put figcaption back in - <figcaption>${block.title}</figcaption> under img
 	else if (block.class == 'Image') {
 		let imageItem =
 			`
@@ -59,6 +61,7 @@ let renderBlock = (block) => {
 					<figure>
 					<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
 					</figure>
+					<h3>Curated by <br>${block.connected_by_username}</h3>
 				</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
@@ -72,6 +75,7 @@ let renderBlock = (block) => {
 					<blockquote>
 						${block.content_html}
 					</blockquote>
+					<h3>Curated by <br>${block.connected_by_username}</h3>
 				</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
@@ -88,6 +92,7 @@ let renderBlock = (block) => {
 				`
 				<li class="block block--video">
 					<video controls src="${ block.attachment.url }"></video>
+					<h3>Curated by <br>${block.connected_by_username}</h3>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
@@ -106,6 +111,7 @@ let renderBlock = (block) => {
 								<img src="${block.image.large.url}" alt="${block.title}">
 							</figure>
 						</a>
+						<h3>Curated by <br>${block.connected_by_username}</h3>
 					</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
@@ -119,6 +125,7 @@ let renderBlock = (block) => {
 				`
 				<li class="block block--audio">
 					<audio controls src="${ block.attachment.url }"></audio>
+					<h3>Curated by <br>${block.connected_by_username}</h3>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
@@ -135,6 +142,7 @@ let renderBlock = (block) => {
 				`
 				<li class="block block--videolinked">
 					${ block.embed.html }
+					<h3>Curated by <br>${block.connected_by_username}</h3>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
@@ -146,6 +154,7 @@ let renderBlock = (block) => {
 				`
 				<li class="block block--audiolinked">
 					${ block.embed.html }
+					<h3>Curated by <br>${block.connected_by_username}</h3>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedAudioItem)
