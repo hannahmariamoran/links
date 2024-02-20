@@ -204,26 +204,32 @@ ul {
 }
 li{
   grid-column: 1 / span 4; 
+  width: 335px;
+  height: 335px;
+  margin-bottom: 60px;
 }
 .block{
   background-color: red;
   display: flex;
   gap: 20px;
   flex-direction: column;
+  container: fill;
 }
 /* ====== link blocks ====== */
 .block--link{
   width: 335px;
   height: 335px;
   overflow: hidden;
+  display: block;
 }
-/* ====== image blocks ====== */
 /* ====== text blocks ====== */
 .block--text{
   background-color: var(--colour-light-bluegrey); 
   width: 335px;
+  max-width: 500px;
   height: 335px;
   overflow: hidden;
+  display: block;
 }
 .block--text p{
   color: var(--colour-grey);
@@ -345,28 +351,12 @@ footer{
     display: flex;
     gap: 20px;
     flex-direction: column;
-    /* align-items: flex-end; */
   }
   /* ====== link blocks ====== */
   .block--link{
     width: 384px;
     height: 384px;
     overflow: hidden;
-  }
-  /* ====== text blocks ====== */
-  .block--text{
-    background-color: var(--colour-light-bluegrey); 
-    width: 383px;
-    height: 383px;
-    overflow: hidden;
-  }
-  .block--text p{
-    color: var(--colour-grey);
-    font-family: Mendl Sans;
-    font-size: var(--blockquote);
-    line-height: var(--blockquote-line-height);
-    font-weight: 300;
-    padding: 20px;
   }
   /* ========== footer ========== */
   footer{
@@ -463,6 +453,8 @@ footer{
     display: flex;
     gap: 20px;
     flex-direction: column;
+    width: 300px;
+    height: 300px;
   }
   /* ====== link blocks ====== */
   .block--link{
@@ -478,21 +470,6 @@ footer{
     border-left: solid 1px var(--colour-blue); 
     border-top: solid 1px var(--colour-blue);
     width: 250px;
-  }
-  /* ====== text blocks ====== */
-  .block--text{
-    background-color: var(--colour-light-bluegrey); 
-    width: 426.7px;
-    height: 426.7px;
-    overflow: hidden;
-  }
-  .block--text p{
-    color: var(--colour-grey);
-    font-family: Mendl Sans;
-    font-size: var(--blockquote);
-    line-height: var(--blockquote-line-height);
-    font-weight: 300;
-    padding: 20px;
   }
   /* ========== footer ========== */
   footer{
