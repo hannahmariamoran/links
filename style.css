@@ -19,6 +19,8 @@ html{
   --h1-line-height: 72px;
   --h2: 28px;
   --h2-line-height: 32px;
+  --h3: 18px;
+  --h3-line-height: 22px;
   --h4: 28px;
   --h4-line-height: 32px;
   --blockquote: 24px;
@@ -50,6 +52,13 @@ h2{
   font-size: var(--h2);
   font-weight: 500;
   line-height: var(--h2-line-height);
+}
+h3{
+  color: var(--colour-grey);
+  font-family: "Work Sans";
+  font-size: var(--h3);
+  font-weight: 400;
+  line-height: var(--h3-line-height);
 }
 h4{
   color: var(--colour-grey);
@@ -165,7 +174,7 @@ aside.highlight {
 /* ========== archive section ========== */
 .archive-section{
   margin-top: 120px;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
   display: flex;
   flex-direction: row;
   gap: 12px;
@@ -190,27 +199,45 @@ aside.highlight {
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 60px;
+  grid-gap: 20px;
   list-style: none;
 }
 li{
   grid-column: 1 / span 4; 
 }
 .block{
-  background-color: red; 
+  background-color: red;
+  width: 335px;
+  height: 335px;
+  overflow: hidden;
+  display: flex;
+  margin-top: 80px;
 }
 /* ====== text blocks ====== */
 .block--text{
-  background-color: var(--colour-beige); 
-  border: solid 1px var(--colour-blue); 
+  background-color: var(--colour-light-bluegrey); 
   padding: 20px;
 }
 .block--text p{
-  color: var(--colour-blue);
+  color: var(--colour-grey);
   font-family: Mendl Sans;
   font-size: var(--blockquote);
   line-height: var(--blockquote-line-height);
   font-weight: 300;
+}
+/* ====== link blocks ====== */
+.block--link{
+}
+/* ====== image blocks ====== */
+.block--image{
+}
+/* ====== curator info ====== */
+.block-curator{
+  padding-left: 12px;
+  padding-top: 12px;
+  grid-column: 1 / span 2; 
+  border-left: solid 1px var(--colour-blue); 
+  border-top: solid 1px var(--colour-blue); 
 }
 /* ========== hide channel count ========== */
 #channel-count{

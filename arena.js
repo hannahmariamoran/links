@@ -46,25 +46,25 @@ let renderBlock = (block) => {
 					<img src="${ block.image.original.url }">
 				</picture>
 				</a>
-				<h3>Curated by <br>${block.connected_by_username}</h3>
 			</li>
+			<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 	}
 
-	// // Images! - if I want to put figcaption back in - <figcaption>${block.title}</figcaption> under img
-	// else if (block.class == 'Image') {
-	// 	let imageItem =
-	// 		`
-	// 			<li class="block block--image">
-	// 				<figure>
-	// 				<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
-	// 				</figure>
-	// 				<h3>Curated by <br>${block.connected_by_username}</h3>
-	// 			</li>
-	// 		`
-	// 	channelBlocks.insertAdjacentHTML('beforeend', imageItem)
-	// }
+	// Images! - if I want to put figcaption back in - <figcaption>${block.title}</figcaption> under img
+	else if (block.class == 'Image') {
+		let imageItem =
+			`
+				<li class="block block--image">
+					<figure>
+					<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
+					</figure>
+				</li>
+				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+			`
+		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
+	}
 
 	// Text!
 	else if (block.class == 'Text') {
@@ -74,91 +74,91 @@ let renderBlock = (block) => {
 					<blockquote>
 						${block.content_html}
 					</blockquote>
-					<h3>Curated by <br>${block.connected_by_username}</h3>
 				</li>
+				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
 	}
 
-	// // Uploaded (not linked) media…
-	// else if (block.class == 'Attachment') {
-	// 	let attachment = block.attachment.content_type // Save us some repetition
+	// Uploaded (not linked) media…
+	else if (block.class == 'Attachment') {
+		let attachment = block.attachment.content_type // Save us some repetition
 
-	// 	// Uploaded videos!
-	// 	if (attachment.includes('video')) {
-	// 		// …still up to you, but we’ll give you the `video` element:
-	// 		let videoItem =
-	// 			`
-	// 			<li class="block block--video">
-	// 				<video controls src="${ block.attachment.url }"></video>
-	// 				<h3>Curated by <br>${block.connected_by_username}</h3>
-	// 			</li>
-	// 			`
-	// 		channelBlocks.insertAdjacentHTML('beforeend', videoItem)
-	// 		// More on video, like the `autoplay` attribute:
-	// 		// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
-	// 	}
+		// Uploaded videos!
+		if (attachment.includes('video')) {
+			// …still up to you, but we’ll give you the `video` element:
+			let videoItem =
+				`
+				<li class="block block--video">
+					<video controls src="${ block.attachment.url }"></video>
+				</li>
+				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+				`
+			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
+			// More on video, like the `autoplay` attribute:
+			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+		}
 
-	// 	// Uploaded PDFs!
-	// 	else if (attachment.includes('pdf')) {
+		// Uploaded PDFs!
+		else if (attachment.includes('pdf')) {
 			
-	// 		let pdfItem =
-	// 			`
-	// 				<li class="block block--pdf">
-	// 					<a href="${block.attachment.url}">
-	// 						<figure>
-	// 							<img src="${block.image.large.url}" alt="${block.title}">
-	// 						</figure>
-	// 					</a>
-	// 					<h3>Curated by <br>${block.connected_by_username}</h3>
-	// 				</li>
-	// 			`
-	// 		channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
-	// 	}
+			let pdfItem =
+				`
+					<li class="block block--pdf">
+						<a href="${block.attachment.url}">
+							<figure>
+								<img src="${block.image.large.url}" alt="${block.title}">
+							</figure>
+						</a>
+					</li>
+					<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+				`
+			channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
+		}
 
-	// 	// Uploaded audio!
-	// 	else if (attachment.includes('audio')) {
-	// 		// …still up to you, but here’s an `audio` element:
-	// 		console.log(block);
-	// 		let audioItem = 
-	// 			`
-	// 			<li class="block block--audio">
-	// 				<audio controls src="${ block.attachment.url }"></audio>
-	// 				<h3>Curated by <br>${block.connected_by_username}</h3>
-	// 			</li>
-	// 			`
-	// 		channelBlocks.insertAdjacentHTML('beforeend', audioItem)
-	// 	}
-	// }
+		// Uploaded audio!
+		else if (attachment.includes('audio')) {
+			// …still up to you, but here’s an `audio` element:
+			console.log(block);
+			let audioItem = 
+				`
+				<li class="block block--audio">
+					<audio controls src="${ block.attachment.url }"></audio>
+				</li>
+				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+				`
+			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
+		}
+	}
 
-	// // Linked media…
-	// else if (block.class == 'Media') {
-	// 	let embed = block.embed.type
+	// Linked media…
+	else if (block.class == 'Media') {
+		let embed = block.embed.type
 
-	// 	// Linked video!
-	// 	if (embed.includes('video')) {
-	// 		let linkedVideoItem =
-	// 			`
-	// 			<li class="block block--videolinked">
-	// 				${ block.embed.html }
-	// 				<h3>Curated by <br>${block.connected_by_username}</h3>
-	// 			</li>
-	// 			`
-	// 		channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
-	// 	}
+		// Linked video!
+		if (embed.includes('video')) {
+			let linkedVideoItem =
+				`
+				<li class="block block--videolinked">
+					${ block.embed.html }
+				</li>
+				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+				`
+			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
+		}
 
-	// 	// Linked audio!
-	// 	else if (embed.includes('rich')) {
-	// 		let linkedAudioItem =
-	// 			`
-	// 			<li class="block block--audiolinked">
-	// 				${ block.embed.html }
-	// 				<h3>Curated by <br>${block.connected_by_username}</h3>
-	// 			</li>
-	// 			`
-	// 		channelBlocks.insertAdjacentHTML('beforeend', linkedAudioItem)
-	// 	}
-	// }
+		// Linked audio!
+		else if (embed.includes('rich')) {
+			let linkedAudioItem =
+				`
+				<li class="block block--audiolinked">
+					${ block.embed.html }
+				</li>
+				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+				`
+			channelBlocks.insertAdjacentHTML('beforeend', linkedAudioItem)
+		}
+	}
 }
 
 
