@@ -21,8 +21,8 @@ html{
   --h2-line-height: 32px;
   --h4: 28px;
   --h4-line-height: 32px;
-  --blockquote: 20px;
-  --blockquote-line-height: 24px;
+  --blockquote: 24px;
+  --blockquote-line-height: 32px;
   --p: 16px;
   --p-line-height: 24px;
   --a: 16px;
@@ -96,15 +96,6 @@ a:active{
 #channel-title{
   display: none;
 }
-
-/* 🚨 having trouble with this as api pulls it in as p tag 🚨 */
-/* blockquote{
-  font-family: Mendl Sans;
-  font-size: var(--h1);
-  line-height: var(--h1-line-height);
-  font-weight: 300;
-  margin-top: 144px;
-} */
 
 /* ========== structure styling ========== */
 body {
@@ -195,7 +186,7 @@ aside.highlight {
 .archive-title{
   text-align: center;
 }
-/* ========== block styling ========== */
+/* =============== block styling =============== */
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -208,14 +199,17 @@ li{
 .block{
   background-color: red; 
 }
+/* ====== text blocks ====== */
 .block--text{
-  background-color: blue; 
+  background-color: var(--colour-beige); 
+  border: solid 1px var(--colour-blue); 
   padding: 20px;
 }
 .block--text p{
+  color: var(--colour-blue);
   font-family: Mendl Sans;
   font-size: var(--blockquote);
-  line-height: var(--blockquote);
+  line-height: var(--blockquote-line-height);
   font-weight: 300;
 }
 /* ========== hide channel count ========== */
