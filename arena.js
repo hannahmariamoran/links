@@ -33,11 +33,13 @@ let renderBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.getElementById('channel-blocks')
 
+
 	// Links!
 	if (block.class == 'Link') {
+		console.log(block.dateadded)
 		let linkItem =
 			`
-			<li>
+			<li class="block block--link">
 				<picture>
 					<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
 					<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
@@ -53,7 +55,7 @@ let renderBlock = (block) => {
 	else if (block.class == 'Image') {
 		let imageItem =
 			`
-				<li>
+				<li class="block block--image">
 					<figure>
 					<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
 					</figure>
@@ -66,7 +68,7 @@ let renderBlock = (block) => {
 	else if (block.class == 'Text') {
 		let textItem =
 			`
-				<li>
+				<li class="block block--text">
 					<blockquote>
 						${block.content_html}
 					</blockquote>
@@ -84,7 +86,7 @@ let renderBlock = (block) => {
 			// …still up to you, but we’ll give you the `video` element:
 			let videoItem =
 				`
-				<li>
+				<li class="block block--video">
 					<video controls src="${ block.attachment.url }"></video>
 				</li>
 				`
@@ -95,9 +97,10 @@ let renderBlock = (block) => {
 
 		// Uploaded PDFs!
 		else if (attachment.includes('pdf')) {
+			
 			let pdfItem =
 				`
-					<li>
+					<li class="block block--pdf">
 						<a href="${block.attachment.url}">
 							<figure>
 								<img src="${block.image.large.url}" alt="${block.title}">
@@ -114,7 +117,7 @@ let renderBlock = (block) => {
 			console.log(block);
 			let audioItem = 
 				`
-				<li>
+				<li class="block block--audio">
 					<audio controls src="${ block.attachment.url }"></audio>
 				</li>
 				`
@@ -130,7 +133,7 @@ let renderBlock = (block) => {
 		if (embed.includes('video')) {
 			let linkedVideoItem =
 				`
-				<li>
+				<li class="block block--videolinked">
 					${ block.embed.html }
 				</li>
 				`
@@ -141,7 +144,7 @@ let renderBlock = (block) => {
 		else if (embed.includes('rich')) {
 			let linkedAudioItem =
 				`
-				<li>
+				<li class="block block--audiolinked">
 					${ block.embed.html }
 				</li>
 				`
