@@ -70,21 +70,21 @@ let renderBlock = (block) => {
 	// 	channelBlocks.insertAdjacentHTML('beforeend', imageItem)
 	// }
 
-	// // Text!
-	// else if (block.class == 'Text') {
-	// 	let textItem =
-	// 		`
-	// 		<li class="block block--text">
-	// 			<blockquote>
-	// 				${block.content_html}
-	// 			</blockquote>
-	// 		</li>
-	// 		<li>
-	// 			<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-	// 		</li>
-	// 		`
-	// 	channelBlocks.insertAdjacentHTML('beforeend', textItem)
-	// }
+	// Text!
+	else if (block.class == 'Text') {
+		let textItem =
+			`
+			<li>
+				<div class="block">
+				<blockquote class="block--text">
+					${block.content_html}
+				</blockquote>
+				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+				</div>
+			</li>
+			`
+		channelBlocks.insertAdjacentHTML('beforeend', textItem)
+	}
 
 	// // Uploaded (not linked) media…
 	// else if (block.class == 'Attachment') {

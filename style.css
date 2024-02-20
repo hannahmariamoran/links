@@ -211,9 +211,19 @@ li{
   gap: 20px;
   flex-direction: column;
 }
+/* ====== link blocks ====== */
+.block--link{
+  width: 335px;
+  height: 335px;
+  overflow: hidden;
+}
+/* ====== image blocks ====== */
 /* ====== text blocks ====== */
-/* .block--text{
+.block--text{
   background-color: var(--colour-light-bluegrey); 
+  width: 335px;
+  height: 335px;
+  overflow: hidden;
 }
 .block--text p{
   color: var(--colour-grey);
@@ -222,14 +232,7 @@ li{
   line-height: var(--blockquote-line-height);
   font-weight: 300;
   padding: 20px;
-} */
-/* ====== link blocks ====== */
-.block--link{
-  width: 335px;
-  height: 335px;
-  overflow: hidden;
 }
-/* ====== image blocks ====== */
 /* ====== pdf blocks ====== */
 
 /* ====== curator info ====== */
@@ -342,13 +345,28 @@ footer{
     display: flex;
     gap: 20px;
     flex-direction: column;
-    align-items: flex-end;
+    /* align-items: flex-end; */
   }
   /* ====== link blocks ====== */
   .block--link{
-    width: 335px;
-    height: 335px;
+    width: 384px;
+    height: 384px;
     overflow: hidden;
+  }
+  /* ====== text blocks ====== */
+  .block--text{
+    background-color: var(--colour-light-bluegrey); 
+    width: 383px;
+    height: 383px;
+    overflow: hidden;
+  }
+  .block--text p{
+    color: var(--colour-grey);
+    font-family: Mendl Sans;
+    font-size: var(--blockquote);
+    line-height: var(--blockquote-line-height);
+    font-weight: 300;
+    padding: 20px;
   }
   /* ========== footer ========== */
   footer{
@@ -415,7 +433,7 @@ footer{
   /* ========== archive section ========== */
   .archive-section{
     margin-top: 240px;
-    margin-bottom: 160px;
+    margin-bottom: 140px;
     justify-content: left;
   }
   .horizontal-line {
@@ -445,7 +463,6 @@ footer{
     display: flex;
     gap: 20px;
     flex-direction: column;
-    align-items: flex-end;
   }
   /* ====== link blocks ====== */
   .block--link{
@@ -461,6 +478,21 @@ footer{
     border-left: solid 1px var(--colour-blue); 
     border-top: solid 1px var(--colour-blue);
     width: 250px;
+  }
+  /* ====== text blocks ====== */
+  .block--text{
+    background-color: var(--colour-light-bluegrey); 
+    width: 426.7px;
+    height: 426.7px;
+    overflow: hidden;
+  }
+  .block--text p{
+    color: var(--colour-grey);
+    font-family: Mendl Sans;
+    font-size: var(--blockquote);
+    line-height: var(--blockquote-line-height);
+    font-weight: 300;
+    padding: 20px;
   }
   /* ========== footer ========== */
   footer{
