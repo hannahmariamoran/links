@@ -281,6 +281,20 @@ li{
   border-top: solid 1px var(--colour-blue);
   width: 200px;
 }
+/* ========== grayscale/hover styling ========== */
+img{
+  filter: grayscale(1);
+}
+img:hover{
+  filter: grayscale(0);
+  transition: transform 0.5s ease-in-out;
+}
+iframe{
+  filter: grayscale(1);
+}
+iframe:hover{
+  filter: grayscale(0);
+}
 /* ========== hide channel count ========== */
 #channel-count{
   display: none;
