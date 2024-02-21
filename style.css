@@ -387,6 +387,9 @@ footer{
     text-align: right;
   }
   /* ========== nav styling ========== */
+  nav {
+    gap: 6px;
+  }
   .options{
     padding: 32px;
   }
@@ -548,6 +551,9 @@ footer{
     text-align: right;
   }
   /* ========== nav styling ========== */
+  nav {
+    gap: 8px;
+  }
   .options{
     padding: 40px;
   }
