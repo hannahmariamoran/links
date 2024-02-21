@@ -217,7 +217,8 @@ li{
 /* ====== link blocks ====== */
 .block--link{
   width: 100%;
-  height: 100%;
+  height: 0;
+  padding-bottom: 100%;
   overflow: hidden;
   display: block;
 }
@@ -225,7 +226,8 @@ li{
 .block--text{
   background-color: var(--colour-light-bluegrey); 
   width: 100%;
-  height: 100%;
+  height: 0;
+  padding-bottom: 100%;
   overflow: hidden;
   display: block;
 }
@@ -247,14 +249,17 @@ li{
 /* ====== pdf blocks ====== */
 .block--pdf{
   width: 100%;
-  height: 100%;
+  height: 0;
+  padding-bottom: 100%;
   overflow: hidden;
   display: block;
 }
 /* ====== uploaded audio blocks ====== */
 .block--audio{
+  background-color: red;
   width: 100%;
-  height: 100%;
+  height: 0;
+  padding-bottom: 100%;
   overflow: hidden;
   display: block;
 }
@@ -410,7 +415,8 @@ footer{
   /* ====== link blocks ====== */
   .block--link{
     width: 100%;
-    height: 100%;
+    height: 0;
+    padding-bottom: 100%;
     overflow: hidden;
     display: block;
   }
@@ -418,7 +424,8 @@ footer{
   .block--text{
     background-color: var(--colour-light-bluegrey); 
     width: 100%;
-    height: 100%;
+    height: 0;
+    padding-bottom: 100%;
     overflow: hidden;
     display: block;
   }
@@ -440,7 +447,8 @@ footer{
   /* ====== pdf blocks ====== */
   .block--pdf{
     width: 100%;
-    height: 100%;
+    height: 0;
+    padding-bottom: 100%;
     overflow: hidden;
     display: block;
   }
@@ -562,14 +570,16 @@ footer{
   /* ====== link blocks ====== */
   .block--link{
     width: 100%;
-    height: 100%;
+    height: 0;
+    padding-bottom: 100%;
     overflow: hidden;
     display: block;
   }
   .block--text{
     background-color: var(--colour-light-bluegrey); 
     width: 100%;
-    height: 100%;
+    height: 0;
+    padding-bottom: 100%;
     overflow: hidden;
     display: block;
   }
@@ -591,7 +601,8 @@ footer{
   /* ====== pdf blocks ====== */
   .block--pdf{
     width: 100%;
-    height: 100%;
+    height: 0;
+    padding-bottom: 100%;
     overflow: hidden;
     display: block;
   }

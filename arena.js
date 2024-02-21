@@ -135,7 +135,7 @@ let renderBlock = (block) => {
 				`
 				<li>
 					<div class="block">
-						<audio controls src="${ block.attachment.url }" class="block--audio"></audio>
+						<div class="block--audio"><audio controls src="${ block.attachment.url }"></audio></div>
 						<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 					</div>
 				</li>
@@ -217,7 +217,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		let switchButtons = document.querySelectorAll ('button')
 		switchButtons.forEach((switchButton) =>{
 			switchButton.onclick = () => { // Attach the event.
-				switchButton.parentElement.classList.toggle(active) // Toggle the class!
+				switchButton.parentElement.classList.toggle('active') // Toggle the class!
 			};			
 		})
 	})
