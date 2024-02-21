@@ -268,7 +268,7 @@ li{
 .block--audio{
   background-color: red;
   width: 100%;
-  height: 0;
+  height: 100%;
   padding-bottom: 100%;
   overflow: hidden;
   display: block;
@@ -292,8 +292,10 @@ li{
 }
 /* ====== linked audio blocks ====== */
 .block--audiolinked{
+  background-color: red;
   width: 100%;
   height: 100%;
+  padding-bottom: 100%;
   overflow: hidden;
   display: block;
 }
@@ -477,8 +479,10 @@ footer{
   }
   /* ====== uploaded audio blocks ====== */
   .block--audio{
+    background-color: red;
     width: 100%;
     height: 100%;
+    padding-bottom: 100%;
     overflow: hidden;
     display: block;
   }
@@ -491,8 +495,10 @@ footer{
   }
   /* ====== linked audio blocks ====== */
   .block--audiolinked{
+    background-color: red;
     width: 100%;
-    height: 100%;
+    height: 0;
+    padding-bottom: 100%;
     overflow: hidden;
     display: block;
   }
@@ -631,8 +637,10 @@ footer{
   }
   /* ====== uploaded audio blocks ====== */
   .block--audio{
+    background-color: red;
     width: 100%;
-    height: 100%;
+    height: 0;
+    padding-bottom: 100%;
     overflow: hidden;
     display: block;
   }
@@ -645,8 +653,10 @@ footer{
   }
   /* ====== linked audio blocks ====== */
   .block--audiolinked{
+    background-color: red;
     width: 100%;
-    height: 100%;
+    height: 0;
+    padding-bottom: 100%;
     overflow: hidden;
     display: block;
   }
