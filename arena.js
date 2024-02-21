@@ -213,7 +213,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
 
-		// –––––––––– Button ––––––––––
+		// –––––––––– Button –––––––––– didn't end up working :/
 		let switchButtons = document.querySelectorAll ('button')
 		switchButtons.forEach((switchButton) =>{
 			switchButton.onclick = () => { // Attach the event.
