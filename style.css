@@ -276,9 +276,19 @@ li{
 /* ====== linked video blocks ====== */
 .block--videolinked{
   width: 100%;
-  height: 100%;
+  height: 0;
+  padding-bottom: 100%;
   overflow: hidden;
   display: block;
+  position: relative;
+}
+.block--videolinked iframe{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* so the image covers the entire block without being distorted */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 /* ====== linked audio blocks ====== */
 .block--audiolinked{
