@@ -378,9 +378,6 @@ footer{
     height: 100%;
     margin-bottom: 0px;
   }
-  /* li:nth-child(2n) {
-    grid-column: 5 / span 4;
-  } */
   .block{
     background-color: red;
     display: flex;
