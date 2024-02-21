@@ -245,6 +245,34 @@ li{
   overflow: hidden;
   display: block;
 }
+/* ====== pdf blocks ====== */
+.block--pdf{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+/* ====== uploaded audio blocks ====== */
+.block--audio{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+/* ====== linked video blocks ====== */
+.block--videolinked{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+/* ====== linked audio blocks ====== */
+.block--audiolinked{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
 /* ====== curator info ====== */
 .block-curator{
   padding-top: 12px;
@@ -368,6 +396,41 @@ footer{
     overflow: hidden;
     display: block;
   }
+  /* ====== image blocks ====== */
+  .block--image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  /* ====== pdf blocks ====== */
+  .block--pdf{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  /* ====== uploaded audio blocks ====== */
+  .block--audio{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  /* ====== linked video blocks ====== */
+  .block--videolinked{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  /* ====== linked audio blocks ====== */
+  .block--audiolinked{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+  }
   /* ========== footer ========== */
   footer{
     padding-top: 16px;
@@ -447,7 +510,7 @@ footer{
   ul {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 32px;
+    grid-gap: 40px;
     list-style: none;
   }
   li{
@@ -471,6 +534,41 @@ footer{
   }
   /* ====== link blocks ====== */
   .block--link{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+  }
+   /* ====== image blocks ====== */
+   .block--image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  /* ====== pdf blocks ====== */
+  .block--pdf{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  /* ====== uploaded audio blocks ====== */
+  .block--audio{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  /* ====== linked video blocks ====== */
+  .block--videolinked{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+  }
+  /* ====== linked audio blocks ====== */
+  .block--audiolinked{
     width: 100%;
     height: 100%;
     overflow: hidden;
