@@ -208,7 +208,7 @@ li{
   margin-bottom: 60px;
 }
 .block{
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -272,7 +272,7 @@ li{
   overflow: hidden;
   display: block;
 }
-/* ====== curator info ====== */
+/* ====== more info ====== */
 .block-curator{
   padding-top: 12px;
   padding-left: 12px;
@@ -280,6 +280,15 @@ li{
   border-left: solid 1px var(--colour-blue); 
   border-top: solid 1px var(--colour-blue);
   width: 200px;
+}
+button{
+  padding-top: 12px;
+  padding-left: 12px;
+  grid-column: 1 / span 2; 
+  border-left: solid 1px var(--colour-blue); 
+  border-top: solid 1px var(--colour-blue);
+  width: 200px;
+  cursor: pointer;
 }
 /* ========== grayscale/hover styling ========== */
 img{
@@ -393,7 +402,6 @@ footer{
     margin-bottom: 0px;
   }
   .block{
-    background-color: red;
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -546,7 +554,6 @@ footer{
     margin-bottom: 0px;
   }
   .block{
-    background-color: red;
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -620,3 +627,12 @@ footer{
   }
 }
 
+.block--image__description{
+  display: none;
+  position: fixed;
+}
+
+.block--image:active .block--image__description{
+  display: block;
+
+}

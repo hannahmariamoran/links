@@ -63,7 +63,8 @@ let renderBlock = (block) => {
 				<figure class="block block--image">
 				<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
 				</figure>
-				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+				<div class="block--image__description">${block.description_html}</div>
+				<button><h3>Click here ↗︎</h3></button>
 			</div>
 			</li>
 			`
@@ -112,7 +113,7 @@ let renderBlock = (block) => {
 			
 			let pdfItem =
 				`
-					<li class="block block--pdf">
+					<li>
 					<div class="block">
 						<a href="${block.attachment.url}" class="block--pdf">
 							<figure>
@@ -211,6 +212,14 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		let channelUsers = document.getElementById('channel-users') // Show them together
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
+
+		// –––––––––– Button ––––––––––
+		let switchButtons = document.querySelectorAll ('button')
+		switchButtons.forEach((switchButton) =>{
+			switchButton.onclick = () => { // Attach the event.
+				switchButton.parentElement.classList.toggle(active) // Toggle the class!
+			};			
+		})
 	})
 
 // –––––––––– Are.na description fading in on scroll up ––––––––––
