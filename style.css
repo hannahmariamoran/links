@@ -517,8 +517,12 @@ footer{
     --h1-line-height: 80px;
     --h2: 40px;
     --h2-line-height: 40px;
+    --h3: 20px;
+    --h3-line-height: 24px;
     --h4: 36px;
     --h4-line-height: 48px;
+    --blockquote: 28px;
+    --blockquote-line-height: 34px;
     --p: 20px;
     --p-line-height: 28px;
      --a: 20px;
@@ -561,7 +565,7 @@ footer{
     grid-row: 5;
   }
   #channel-description {
-    grid-column: 3 / span 5; 
+    grid-column: 3 / span 6; 
     grid-row: 6;
   }
   /* ========== archive section ========== */
@@ -618,7 +622,7 @@ footer{
     font-size: var(--blockquote);
     line-height: var(--blockquote-line-height);
     font-weight: 300;
-    padding: 20px;
+    padding: 24px;
   }
   /* ====== image blocks ====== */
   .block--image{
