@@ -71,20 +71,20 @@ let renderBlock = (block) => {
 	}
 
 	// Text!
-	// else if (block.class == 'Text') {
-	// 	let textItem =
-	// 		`
-	// 		<li>
-	// 			<div class="block">
-	// 			<blockquote class="block--text">
-	// 				${block.content_html}
-	// 			</blockquote>
-	// 			<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-	// 			</div>
-	// 		</li>
-	// 		`
-	// 	channelBlocks.insertAdjacentHTML('beforeend', textItem)
-	// }
+	else if (block.class == 'Text') {
+		let textItem =
+			`
+			<li>
+				<div class="block">
+				<blockquote class="block--text">
+					${block.content_html}
+				</blockquote>
+				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+				</div>
+			</li>
+			`
+		channelBlocks.insertAdjacentHTML('beforeend', textItem)
+	}
 
 	// Uploaded (not linked) media…
 	else if (block.class == 'Attachment') {

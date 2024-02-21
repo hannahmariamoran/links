@@ -222,11 +222,10 @@ li{
   display: block;
 }
 /* ====== text blocks ====== */
-/* .block--text{
+.block--text{
   background-color: var(--colour-light-bluegrey); 
-  width: 335px;
-  max-width: 500px;
-  height: 335px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   display: block;
 }
@@ -237,7 +236,7 @@ li{
   line-height: var(--blockquote-line-height);
   font-weight: 300;
   padding: 20px;
-} */
+}
 /* ====== image blocks ====== */
 .block--image{
   width: 100%;
