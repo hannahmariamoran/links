@@ -28,10 +28,10 @@ let placeChannelInfo = (data) => {
 
 
 
-// Then our big function for specific-block-type rendering:
-let renderBlock = (block) => {
+// Function for link blocks
+let renderLinkBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
-	let channelBlocks = document.getElementById('channel-blocks')
+	let channelBlocks = document.getElementById('link-blocks')
 
 
 	// Links!
@@ -53,9 +53,16 @@ let renderBlock = (block) => {
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 	}
+}
 
-	// Images! - if I want to put figcaption back in - <figcaption>${block.title}</figcaption> under img
-	else if (block.class == 'Image') {
+// Function for image blocks
+let renderImageBlock = (block) => {
+	// To start, a shared `ul` where we’ll insert all our blocks
+	let channelBlocks = document.getElementById('image-blocks')
+
+
+	// Images!
+	if (block.class == 'Image') {
 		let imageItem =
 			`
 			<li>
@@ -70,9 +77,16 @@ let renderBlock = (block) => {
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
 	}
+}
+
+// Function for text blocks
+let renderTextBlock = (block) => {
+	// To start, a shared `ul` where we’ll insert all our blocks
+	let channelBlocks = document.getElementById('text-blocks')
+
 
 	// Text!
-	else if (block.class == 'Text') {
+	if (block.class == 'Text') {
 		let textItem =
 			`
 			<li>
@@ -86,70 +100,102 @@ let renderBlock = (block) => {
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
 	}
+}
+// Function for uploaded video blocks
+let renderUploadVideoBlock = (block) => {
+	// To start, a shared `ul` where we’ll insert all our blocks
+	let channelBlocks = document.getElementById('uploadvideo-blocks')
 
-	// Uploaded (not linked) media…
-	else if (block.class == 'Attachment') {
-		let attachment = block.attachment.content_type // Save us some repetition
 
-		// Uploaded videos!
-		if (attachment.includes('video')) {
-			// …still up to you, but we’ll give you the `video` element:
-			let videoItem =
-				`
-				<li class="block block--video">
-					<video controls src="${ block.attachment.url }"></video>
-				</li>
-				<li>
-					<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-				</li>
-				`
-			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
-			// More on video, like the `autoplay` attribute:
-			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
-		}
-
-		// Uploaded PDFs!
-		else if (attachment.includes('pdf')) {
-			
-			let pdfItem =
-				`
-					<li>
-					<div class="block">
-						<a href="${block.attachment.url}" class="block--pdf">
-							<figure>
-								<img src="${block.image.large.url}" alt="${block.title}">
-							</figure>
-						</a>
-						<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-					</div>
+		// Uploaded (not linked) media…
+		if (block.class == 'Attachment') {
+			let attachment = block.attachment.content_type // Save us some repetition
+	
+			// Uploaded videos!
+			if (attachment.includes('video')) {
+				// …still up to you, but we’ll give you the `video` element:
+				let videoItem =
+					`
+					<li class="block block--video">
+						<video controls src="${ block.attachment.url }"></video>
 					</li>
-				`
-			channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
-		}
-
-		// Uploaded audio!
-		else if (attachment.includes('audio')) {
-			// …still up to you, but here’s an `audio` element:
-			console.log(block)
-			let audioItem = 
-				`
-				<li>
-					<div class="block">
-						<div class="block--audio">
-						<audio controls src="${ block.attachment.url }"></audio>
-						</div>
+					<li>
 						<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-					</div>
-				</li>
-				`
-			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
+					</li>
+					`
+				channelBlocks.insertAdjacentHTML('beforeend', videoItem)
+				// More on video, like the `autoplay` attribute:
+				// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+			}
 		}
-	}
+}
+// Function for uploaded pdf blocks
+let renderPDFBlock = (block) => {
+	// To start, a shared `ul` where we’ll insert all our blocks
+	let channelBlocks = document.getElementById('pdf-blocks')
 
-	// Linked media…
-	else if (block.class == 'Media') {
+
+		// Uploaded (not linked) media…
+		if (block.class == 'Attachment') {
+			let attachment = block.attachment.content_type // Save us some repetition
+	
+			// Uploaded PDFs!
+			if (attachment.includes('pdf')) {
+				
+				let pdfItem =
+					`
+						<li>
+						<div class="block">
+							<a href="${block.attachment.url}" class="block--pdf">
+								<figure>
+									<img src="${block.image.large.url}" alt="${block.title}">
+								</figure>
+							</a>
+							<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+						</div>
+						</li>
+					`
+				channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
+			}
+		}
+}
+// Function for uploaded audio blocks
+let renderUploadAudioBlock = (block) => {
+	// To start, a shared `ul` where we’ll insert all our blocks
+	let channelBlocks = document.getElementById('uploadaudio-blocks')
+
+
+		// Uploaded (not linked) media…
+		if (block.class == 'Attachment') {
+			let attachment = block.attachment.content_type // Save us some repetition
+	
+			// Uploaded audio!
+			if (attachment.includes('audio')) {
+				// …still up to you, but here’s an `audio` element:
+				console.log(block)
+				let audioItem = 
+					`
+					<li>
+						<div class="block">
+							<div class="block--audio">
+							<audio controls src="${ block.attachment.url }"></audio>
+							</div>
+							<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+						</div>
+					</li>
+					`
+				channelBlocks.insertAdjacentHTML('beforeend', audioItem)
+			}
+		}
+}
+// Function for linked video blocks
+let renderLinkedVideoBlock = (block) => {
+	// To start, a shared `ul` where we’ll insert all our blocks
+	let channelBlocks = document.getElementById('linkedvideo-blocks')
+
+		if (block.class == 'Media') {
 		let embed = block.embed.type
-
+		
 		// Linked video!
 		if (embed.includes('video')) {
 			let linkedVideoItem =
@@ -164,8 +210,17 @@ let renderBlock = (block) => {
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 		}
 
+}}
+// Function for linked audio blocks
+let renderLinkedAudioBlock = (block) => {
+	// To start, a shared `ul` where we’ll insert all our blocks
+	let channelBlocks = document.getElementById('linkedaudio-blocks')
+
+		if (block.class == 'Media') {
+		let embed = block.embed.type
+		
 		// Linked audio!
-		else if (embed.includes('rich')) {
+		if (embed.includes('rich')) {
 			let linkedAudioItem =
 				`
 				<li>
@@ -177,9 +232,8 @@ let renderBlock = (block) => {
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedAudioItem)
 		}
-	}
-}
 
+}}
 
 
 // It‘s always good to credit your work:
@@ -207,13 +261,43 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		// Loop through the `contents` array (list), backwards. Are.na returns them in reverse!
 		data.contents.reverse().forEach((block) => {
 			// console.log(block) // The data for a single block
-			renderBlock(block) // Pass the single block data to the render function
+			renderLinkBlock(block) // Pass the single block data to the render function
+		})
+		data.contents.reverse().forEach((block) => {
+			// console.log(block) // The data for a single block
+			renderImageBlock(block) // Pass the single block data to the render function
+		})
+		data.contents.reverse().forEach((block) => {
+			// console.log(block) // The data for a single block
+			renderTextBlock(block) // Pass the single block data to the render function
+		})
+		data.contents.reverse().forEach((block) => {
+			// console.log(block) // The data for a single block
+			renderUploadVideoBlock(block) // Pass the single block data to the render function
+		})
+		data.contents.reverse().forEach((block) => {
+			// console.log(block) // The data for a single block
+			renderPDFBlock(block) // Pass the single block data to the render function
+		})
+		data.contents.reverse().forEach((block) => {
+			// console.log(block) // The data for a single block
+			renderUploadAudioBlock(block) // Pass the single block data to the render function
+		})
+		data.contents.reverse().forEach((block) => {
+			// console.log(block) // The data for a single block
+			renderLinkedVideoBlock(block) // Pass the single block data to the render function
+		})
+		data.contents.reverse().forEach((block) => {
+			// console.log(block) // The data for a single block
+			renderLinkedAudioBlock(block) // Pass the single block data to the render function
 		})
 
 		// Also display the owner and collaborators:
 		let channelUsers = document.getElementById('channel-users') // Show them together
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
+
+
 
 		// –––––––––– Button –––––––––– didn't end up working :/
 		let switchButtons = document.querySelectorAll ('button')
