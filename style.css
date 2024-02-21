@@ -342,6 +342,9 @@ footer{
   padding-top: 12px;
   margin-top: 120px;
 }
+.grey-text{
+  color: var(--colour-grey);
+}
 
 /* ================================== tablet media query ================================== */
 @media (min-width: 768px) and (max-width: 1023px) {
