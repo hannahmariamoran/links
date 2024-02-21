@@ -134,6 +134,7 @@ nav {
   left: 0;
   right: 0;
   padding: 20px;
+  z-index: 1;
 }
 /* ========== intro section ========== */
 .intro-section{
@@ -144,7 +145,6 @@ nav {
   grid-auto-rows: minmax(100px, auto);
 }
 .intro-image {
-  opacity: 50%;
   grid-column: 1 / span 4; 
   grid-row: 1;
   max-width: 75vw;
@@ -320,16 +320,21 @@ button{
 /* ========== grayscale/hover styling ========== */
 img{
   filter: grayscale(1);
+  opacity: 0.8;
 }
 img:hover{
   filter: grayscale(0);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
+  opacity: 1;
 }
 iframe{
   filter: grayscale(1);
+  opacity: 0.8;
 }
 iframe:hover{
   filter: grayscale(0);
+  transition: transform 1s ease-in-out;
+  opacity: 1;
 }
 /* ========== hide channel count ========== */
 #channel-count{
