@@ -102,9 +102,9 @@ let renderTextBlock = (block) => {
 	}
 }
 // Function for uploaded video blocks
-let renderUploadVideoBlock = (block) => {
+let renderVideoBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
-	let channelBlocks = document.getElementById('uploadvideo-blocks')
+	let channelBlocks = document.getElementById('video-blocks')
 
 
 		// Uploaded (not linked) media…
@@ -126,6 +126,24 @@ let renderUploadVideoBlock = (block) => {
 				channelBlocks.insertAdjacentHTML('beforeend', videoItem)
 				// More on video, like the `autoplay` attribute:
 				// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+			}
+		}
+		// Linked media…
+		if (block.class == 'Media') {
+			let embed = block.embed.type
+			
+			// Linked video!
+			if (embed.includes('video')) {
+				let linkedVideoItem =
+					`
+					<li>
+						<div class="block">
+							<div class="block--videolinked">${ block.embed.html }</div>
+							<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+						</div>
+					</li>
+					`
+				channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 			}
 		}
 }
@@ -160,9 +178,9 @@ let renderPDFBlock = (block) => {
 		}
 }
 // Function for uploaded audio blocks
-let renderUploadAudioBlock = (block) => {
+let renderAudioBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
-	let channelBlocks = document.getElementById('uploadaudio-blocks')
+	let channelBlocks = document.getElementById('audio-blocks')
 
 
 		// Uploaded (not linked) media…
@@ -187,53 +205,25 @@ let renderUploadAudioBlock = (block) => {
 				channelBlocks.insertAdjacentHTML('beforeend', audioItem)
 			}
 		}
-}
-// Function for linked video blocks
-let renderLinkedVideoBlock = (block) => {
-	// To start, a shared `ul` where we’ll insert all our blocks
-	let channelBlocks = document.getElementById('linkedvideo-blocks')
-
+		// Linked media…
 		if (block.class == 'Media') {
-		let embed = block.embed.type
-		
-		// Linked video!
-		if (embed.includes('video')) {
-			let linkedVideoItem =
-				`
-				<li>
-					<div class="block">
-						<div class="block--videolinked">${ block.embed.html }</div>
+			let embed = block.embed.type
+			
+			// Linked audio!
+			if (embed.includes('rich')) {
+				let linkedAudioItem =
+					`
+					<li>
+						<div class="block">
+						<div class="block--audiolinked">${ block.embed.html }</div>
 						<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-					</div>
-				</li>
-				`
-			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
+						</div>
+					</li>
+					`
+				channelBlocks.insertAdjacentHTML('beforeend', linkedAudioItem)
+			}
 		}
-
-}}
-// Function for linked audio blocks
-let renderLinkedAudioBlock = (block) => {
-	// To start, a shared `ul` where we’ll insert all our blocks
-	let channelBlocks = document.getElementById('linkedaudio-blocks')
-
-		if (block.class == 'Media') {
-		let embed = block.embed.type
-		
-		// Linked audio!
-		if (embed.includes('rich')) {
-			let linkedAudioItem =
-				`
-				<li>
-					<div class="block">
-					<div class="block--audiolinked">${ block.embed.html }</div>
-					<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-					</div>
-				</li>
-				`
-			channelBlocks.insertAdjacentHTML('beforeend', linkedAudioItem)
-		}
-
-}}
+}
 
 
 // It‘s always good to credit your work:
@@ -273,7 +263,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		})
 		data.contents.reverse().forEach((block) => {
 			// console.log(block) // The data for a single block
-			renderUploadVideoBlock(block) // Pass the single block data to the render function
+			renderVideoBlock(block) // Pass the single block data to the render function
 		})
 		data.contents.reverse().forEach((block) => {
 			// console.log(block) // The data for a single block
@@ -281,15 +271,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		})
 		data.contents.reverse().forEach((block) => {
 			// console.log(block) // The data for a single block
-			renderUploadAudioBlock(block) // Pass the single block data to the render function
-		})
-		data.contents.reverse().forEach((block) => {
-			// console.log(block) // The data for a single block
-			renderLinkedVideoBlock(block) // Pass the single block data to the render function
-		})
-		data.contents.reverse().forEach((block) => {
-			// console.log(block) // The data for a single block
-			renderLinkedAudioBlock(block) // Pass the single block data to the render function
+			renderAudioBlock(block) // Pass the single block data to the render function
 		})
 
 		// Also display the owner and collaborators:
