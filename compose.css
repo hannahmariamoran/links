@@ -522,6 +522,9 @@ h5{
     width: 30px;
   }
   /* =============== block styling =============== */
+  .container{
+    margin-top: 100px;
+  }
   ul {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -718,6 +721,9 @@ h5{
     height: 24px;
   }
   /* =============== block styling =============== */
+  .container{
+    margin-top: 210px;
+  }
   ul {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

@@ -203,6 +203,9 @@ aside.highlight {
   text-align: center;
 }
 /* =============== block styling =============== */
+.container{
+  margin-top: 80px;
+}
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -768,7 +771,7 @@ h5{
   }
   /* =============== block styling =============== */
   .container{
-    margin-top: 200px;
+    margin-top: 210px;
   }
   ul {
     display: grid;
