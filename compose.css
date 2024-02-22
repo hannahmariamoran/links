@@ -24,6 +24,8 @@ html{
   --h3-line-height: 22px;
   --h4: 28px;
   --h4-line-height: 32px;
+  --h5: 30px;
+  --h5-line-height: 30px;
   --blockquote: 24px;
   --blockquote-line-height: 32px;
   --p: 16px;
@@ -352,6 +354,77 @@ footer{
   padding-top: 12px;
   margin-top: 120px;
 }
+/* ––––––– player animation ––––––– */
+.player{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 355px;
+  height: 150px;
+  margin: auto;
+  margin-top: 200px;
+  align-items: flex-end;
+}
+.player li {
+  margin-bottom: 0px;
+}
+.playerblock{
+  background-color: var(--colour-grey);
+  border: solid 1px var(--colour-blue);
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 5px;
+}
+.playerblock li{
+  margin-bottom: 0px;
+}
+.upnext{
+  text-align: end;
+}
+.nowplaying{
+  color: var(--colour-beige);
+  font-weight: 300;
+}
+h5{
+  color: var(--colour-beige);
+  font-family: "Mendl Sans";
+  font-size: var(--h5);
+  font-weight: 400;
+  text-align: center;
+}
+/* ––––––– soundwave animation ––––––– */
+.soundwave{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+}
+.soundwave::before{
+  content: 'aaaaaaaaaaaaa';
+  position: absolute;
+  top: -46px;
+  left: 0;
+  color: transparent;
+  font-size: 4em;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--colour-blue);
+  text-decoration-line: underline;
+  animation: animate 1s linear infinite;
+}
+@keyframes animate 
+{
+  0%{
+    transform: translateX(-1px);
+  }
+  100%{
+    transform: translateX(-57px);
+  }
+}
 .grey-text{
   color: var(--colour-grey);
 }
@@ -368,6 +441,8 @@ footer{
     --h3-line-height: 22px;
     --h4: 28px;
     --h4-line-height: 33px;
+    --h5: 32px;
+    --h5-line-height: 32px;
     --blockquote: 28px;
     --blockquote-line-height: 34px;
     --p: 16px;
@@ -518,6 +593,14 @@ footer{
     padding-top: 16px;
     margin-top: 180px;
   }
+  /* ––––––– player animation ––––––– */
+  .player{
+    height: 162px;
+  }
+  .playerblock{
+    height: 162px;
+    gap: 16px;
+  }
 }
 
 /* ================================== desktop media query ================================== */
@@ -532,6 +615,8 @@ footer{
     --h3-line-height: 24px;
     --h4: 36px;
     --h4-line-height: 48px;
+    --h5: 34px;
+    --h5-line-height: 34px;
     --blockquote: 28px;
     --blockquote-line-height: 34px;
     --p: 20px;
@@ -692,6 +777,14 @@ footer{
     padding-top: 20px;
     margin-top: 240px;
   }
+ /* ––––––– player animation ––––––– */
+ .player{
+  height: 162px;
+}
+.playerblock{
+  height: 162px;
+  gap: 16px;
+}
 }
 
 /* trying to style buttons */
@@ -703,63 +796,4 @@ footer{
 .block--image:active .block--image__description{
   display: block;
 
-}
-
-/* ––––––– player animation ––––––– */
-.player{
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 300px;
-  height: 100%;
-}
-.playerblock{
-  background-color: var(--colour-grey);
-  border: solid 1px var(--colour-blue);
-  width: 300px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 12px;
-  border-radius: 5px;
-}
-.nowplaying{
-  color: var(--colour-beige);
-  font-weight: 300;
-}
-h5{
-  color: var(--colour-beige);
-  font-family: "Mendl Sans";
-  font-size: 36px;
-  font-weight: 300;
-  text-align: center;
-}
-/* ––––––– soundwave animation ––––––– */
-.soundwave{
-  position: relative;
-  width: 100%;
-  height: 40px;
-  overflow: hidden;
-}
-.soundwave::before{
-  content: 'aaaaaaaaaaaaa';
-  position: absolute;
-  top: -46px;
-  left: 0;
-  color: transparent;
-  font-size: 4em;
-  text-decoration-style: wavy;
-  text-decoration-color: var(--colour-blue);
-  text-decoration-line: underline;
-  animation: animate 1s linear infinite;
-}
-@keyframes animate 
-{
-  0%{
-    transform: translateX(-1px);
-  }
-  100%{
-    transform: translateX(-57px);
-  }
 }
