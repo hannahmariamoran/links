@@ -39,8 +39,8 @@ let renderLinkBlock = (block) => {
 		let linkItem =
 			`
 			<li>
-				<div class="block block--link>
-				<a href="${ block.source.url }">
+				<div class="block">
+				<a href="${ block.source.url }" class=" block--link>
 					<picture>
 						<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
 						<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
