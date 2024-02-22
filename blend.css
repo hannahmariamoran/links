@@ -223,6 +223,10 @@ li{
   flex-direction: column;
   container: fill;
   filter: drop-shadow(4px 4px 4px rgba(66, 66, 63, 0.3));
+  transition: all 0.1s linear;
+}
+.block:hover{
+  transform: scale(1.01);
 }
 /* ====== link blocks ====== */
 .block--link{
