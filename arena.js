@@ -166,11 +166,14 @@ let renderBlock = (block) => {
 
 		// Linked audio!
 		else if (embed.includes('rich')) {
+			console.log(block)
 			let linkedAudioItem =
 				`
 				<li>
 					<div class="block">
-					<div class="block--audiolinked">${ block.embed.html }</div>
+					<div class="block--audiolinked">
+						<div class="spotify-player">${ block.embed.html }</div>
+					</div>
 					<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 					</div>
 				</li>

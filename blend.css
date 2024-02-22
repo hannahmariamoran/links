@@ -298,12 +298,16 @@ li{
 }
 /* ====== linked audio blocks ====== */
 .block--audiolinked{
-  background-color: red;
+  background-color: var(--colour-light-bluegrey);
   width: 100%;
-  height: 100%;
+  height: 0;
   padding-bottom: 100%;
   overflow: hidden;
   display: block;
+}
+.spotify-player{
+  width: 100%;
+  padding: 12px;
 }
 /* ====== more info ====== */
 .block-curator{
@@ -586,12 +590,16 @@ h5{
   }
   /* ====== linked audio blocks ====== */
   .block--audiolinked{
-    background-color: red;
+    background-color: var(--colour-light-bluegrey);
     width: 100%;
     height: 0;
     padding-bottom: 100%;
     overflow: hidden;
     display: block;
+  }
+  .spotify-player{
+    width: 100%;
+    padding: 12px;
   }
   /* ========== footer ========== */
   footer{
@@ -622,8 +630,8 @@ h5{
     --h4-line-height: 48px;
     --h5: 34px;
     --h5-line-height: 34px;
-    --blockquote: 28px;
-    --blockquote-line-height: 34px;
+    --blockquote: 26px;
+    --blockquote-line-height: 32px;
     --p: 20px;
     --p-line-height: 28px;
      --a: 20px;
@@ -766,12 +774,16 @@ h5{
   }
   /* ====== linked audio blocks ====== */
   .block--audiolinked{
-    background-color: red;
+    background-color: var(--colour-light-bluegrey);
     width: 100%;
     height: 0;
     padding-bottom: 100%;
     overflow: hidden;
     display: block;
+  }
+  .spotify-player{
+    width: 100%;
+    padding: 12px;
   }
   /* ====== curator info ====== */
   .block-curator{
