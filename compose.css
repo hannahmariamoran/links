@@ -215,11 +215,11 @@ li{
   margin-bottom: 60px;
 }
 .block{
-  /* background-color: red; */
   display: flex;
   gap: 20px;
   flex-direction: column;
   container: fill;
+  filter: drop-shadow(4px 4px 4px rgba(66, 66, 63, 0.3));
 }
 /* ====== link blocks ====== */
 .block--link{

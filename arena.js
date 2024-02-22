@@ -162,6 +162,7 @@ let renderBlock = (block) => {
 					<div class="block--audiolinked">
 						<div class="spotify-player">${ block.embed.html }</div>
 					</div>
+
 					</div>
 				</li>
 				`
