@@ -343,7 +343,7 @@ button{
 /* ========== grayscale/hover styling ========== */
 img{
   filter: grayscale(1);
-  opacity: 0.8;
+  opacity: 1;
 }
 img:hover{
   filter: grayscale(0);
@@ -352,7 +352,7 @@ img:hover{
 }
 iframe{
   filter: grayscale(1);
-  opacity: 0.8;
+  opacity: 1;
 }
 iframe:hover{
   filter: grayscale(0);
