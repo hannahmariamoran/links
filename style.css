@@ -90,13 +90,17 @@ a{
   font-weight: 400;
   line-height: var(--a-line-height);
 }
+a{
+  color: var(--colour-grey);
+  font-family: "Work Sans";
+  font-size: var(--a);
+  font-weight: 400;
+  line-height: var(--a-line-height);
+  transition: all 0.1s linear;
+}
 a:hover{
   color: var(--colour-blue);
   font-weight: 600;
-  transition: 0.2s;
-}
-a:active{
-  color: var(--colour-blue);
 }
 .bold{
   font-weight: 600;
@@ -149,10 +153,11 @@ nav {
   grid-column: 1 / span 4; 
   grid-row: 1;
   max-width: 75vw;
+  transition: all 0.3s linear;
 }
 .intro-image:hover{
   transform: rotate(-15deg);
-  transition: transform 0.5s ease-in-out;
+  scale: 1.05;
 }
 .collab-text-position {
   grid-column: 3 / span 4; 

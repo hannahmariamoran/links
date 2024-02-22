@@ -92,11 +92,11 @@ a{
   font-size: var(--a);
   font-weight: 400;
   line-height: var(--a-line-height);
+  transition: all 0.1s linear;
 }
 a:hover{
   color: var(--colour-blue);
   font-weight: 600;
-  transition: 0.2s;
 }
 a:active{
   color: var(--colour-blue);
