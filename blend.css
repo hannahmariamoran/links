@@ -728,8 +728,50 @@ h5{
     grid-gap: 40px;
     list-style: none;
   }
-  li{
+  li:nth-child(8n + 1){
     grid-column: span 4; 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+  li:nth-child(8n + 2){
+    grid-column: span 4; 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+  li:nth-child(8n + 3){
+    grid-column: span 4; 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+  li:nth-child(8n + 4){
+    grid-column: 5 / span 4; 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+  li:nth-child(8n + 5){
+    grid-column: 9 / span 4; 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+  li:nth-child(8n + 6){
+    grid-column: 1 / span 4; 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+  li:nth-child(8n + 7){
+    grid-column: 9 / span 4; 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+  li:nth-child(8n + 8){
+    grid-column: 5 / span 4; 
     width: 100%;
     height: 100%;
     margin-bottom: 0px;
