@@ -39,15 +39,14 @@ let renderLinkBlock = (block) => {
 		let linkItem =
 			`
 			<li>
-				<div class="block">
-				<a href="${ block.source.url }" class="block--link>
+				<div class="block block--link>
+				<a href="${ block.source.url }">
 					<picture>
 						<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
 						<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
 						<img src="${ block.image.original.url }">
 					</picture>
 				</a>
-				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 				</div>
 			</li>
 			`
@@ -70,8 +69,6 @@ let renderImageBlock = (block) => {
 				<figure class="block block--image">
 				<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
 				</figure>
-				<div class="block--image__description">${block.description_html}</div>
-				<button><h3>Click here ↗︎</h3></button>
 			</div>
 			</li>
 			`
@@ -94,14 +91,13 @@ let renderTextBlock = (block) => {
 				<blockquote class="block--text">
 					${block.content_html}
 				</blockquote>
-				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 				</div>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
 	}
 }
-// Function for uploaded video blocks
+// Function for video blocks
 let renderVideoBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.getElementById('video-blocks')
@@ -119,9 +115,6 @@ let renderVideoBlock = (block) => {
 					<li class="block block--video">
 						<video controls src="${ block.attachment.url }"></video>
 					</li>
-					<li>
-						<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-					</li>
 					`
 				channelBlocks.insertAdjacentHTML('beforeend', videoItem)
 				// More on video, like the `autoplay` attribute:
@@ -137,9 +130,8 @@ let renderVideoBlock = (block) => {
 				let linkedVideoItem =
 					`
 					<li>
-						<div class="block">
-							<div class="block--videolinked">${ block.embed.html }</div>
-							<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+						<div class="block block--videolinked">
+							<div>${ block.embed.html }</div>
 						</div>
 					</li>
 					`
@@ -162,22 +154,21 @@ let renderPDFBlock = (block) => {
 				
 				let pdfItem =
 					`
-						<li>
-						<div class="block">
-							<a href="${block.attachment.url}" class="block--pdf">
+					<li>
+						<div class="block block--pdf">
+							<a href="${block.attachment.url}">
 								<figure>
 									<img src="${block.image.large.url}" alt="${block.title}">
 								</figure>
 							</a>
-							<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 						</div>
-						</li>
+					</li>
 					`
 				channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
 			}
 		}
 }
-// Function for uploaded audio blocks
+// Function for audio blocks
 let renderAudioBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.getElementById('audio-blocks')
@@ -211,13 +202,12 @@ let renderAudioBlock = (block) => {
 				let linkedAudioItem =
 					`
 					<li>
-						<div class="block">
-						<div class="block--audiolinked">
-							<div class="spotify-player">${ block.embed.html }</div>
-						</div>
-						<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-						</div>
-					</li>
+					<div class="block">
+					<div class="block--audiolinked">
+						<div class="spotify-player">${ block.embed.html }</div>
+					</div>
+					</div>
+				</li>
 					`
 				channelBlocks.insertAdjacentHTML('beforeend', linkedAudioItem)
 			}

@@ -162,7 +162,6 @@ let renderBlock = (block) => {
 					<div class="block--audiolinked">
 						<div class="spotify-player">${ block.embed.html }</div>
 					</div>
-					<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 					</div>
 				</li>
 				`
