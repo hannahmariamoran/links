@@ -194,12 +194,9 @@ let renderAudioBlock = (block) => {
 				let audioItem = 
 					`
 					<li>
-						<div class="block">
-							<div class="block--audio">
-							<audio controls src="${ block.attachment.url }"></audio>
-							</div>
-							<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-						</div>
+					<div class="block block--audio">
+						<div class="audio-player"><audio controls src="${ block.attachment.url }"></audio></div>
+					</div>
 					</li>
 					`
 				channelBlocks.insertAdjacentHTML('beforeend', audioItem)
@@ -215,7 +212,9 @@ let renderAudioBlock = (block) => {
 					`
 					<li>
 						<div class="block">
-						<div class="block--audiolinked">${ block.embed.html }</div>
+						<div class="block--audiolinked">
+							<div class="spotify-player">${ block.embed.html }</div>
+						</div>
 						<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 						</div>
 					</li>

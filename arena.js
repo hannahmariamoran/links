@@ -39,15 +39,14 @@ let renderBlock = (block) => {
 		let linkItem =
 			`
 			<li>
-				<div class="block">
-				<a href="${ block.source.url }" class="block--link>
+				<div class="block block--link>
+				<a href="${ block.source.url }">
 					<picture>
 						<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
 						<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
 						<img src="${ block.image.original.url }">
 					</picture>
 				</a>
-				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 				</div>
 			</li>
 			`
@@ -63,8 +62,6 @@ let renderBlock = (block) => {
 				<figure class="block block--image">
 				<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
 				</figure>
-				<div class="block--image__description">${block.description_html}</div>
-				<button><h3>Click here ↗︎</h3></button>
 			</div>
 			</li>
 			`
@@ -80,7 +77,6 @@ let renderBlock = (block) => {
 				<blockquote class="block--text">
 					${block.content_html}
 				</blockquote>
-				<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 				</div>
 			</li>
 			`
@@ -99,9 +95,6 @@ let renderBlock = (block) => {
 				<li class="block block--video">
 					<video controls src="${ block.attachment.url }"></video>
 				</li>
-				<li>
-					<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
-				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
 			// More on video, like the `autoplay` attribute:
@@ -114,13 +107,12 @@ let renderBlock = (block) => {
 			let pdfItem =
 				`
 					<li>
-					<div class="block">
-						<a href="${block.attachment.url}" class="block--pdf">
+					<div class="block block--pdf">
+						<a href="${block.attachment.url}">
 							<figure>
 								<img src="${block.image.large.url}" alt="${block.title}">
 							</figure>
 						</a>
-						<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 					</div>
 					</li>
 				`
@@ -134,11 +126,8 @@ let renderBlock = (block) => {
 			let audioItem = 
 				`
 				<li>
-					<div class="block">
-						<div class="block--audio">
-							<div class="audio-player"><audio controls src="${ block.attachment.url }"></audio></div>
-						</div>
-						<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+					<div class="block block--audio">
+						<div class="audio-player"><audio controls src="${ block.attachment.url }"></audio></div>
 					</div>
 				</li>
 				`
@@ -155,9 +144,8 @@ let renderBlock = (block) => {
 			let linkedVideoItem =
 				`
 				<li>
-					<div class="block">
-						<div class="block--videolinked">${ block.embed.html }</div>
-						<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
+					<div class="block block--videolinked">
+						<div>${ block.embed.html }</div>
 					</div>
 				</li>
 				`

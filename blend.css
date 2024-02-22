@@ -9,6 +9,7 @@ html{
 :root {
   --colour-black:#121111;
   --colour-blue:#539FB0;
+  --colour-blue-2: #A7CED6;
   --colour-beige:#F9F5EE;
   --colour-grey: #423F3F;
   --colour-light-grey: #66696a;
@@ -214,7 +215,6 @@ li{
   margin-bottom: 60px;
 }
 .block{
-  /* background-color: red; */
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -230,7 +230,7 @@ li{
 }
 /* ====== text blocks ====== */
 .block--text{
-  background-color: var(--colour-light-bluegrey); 
+  background-color: var(--colour-blue-2); 
   width: 100%;
   height: 0;
   padding-bottom: 100%;
@@ -599,7 +599,7 @@ h5{
   }
   /* ====== text blocks ====== */
   .block--text{
-    background-color: var(--colour-light-bluegrey); 
+    background-color: var(--colour-blue-2); 
     width: 100%;
     height: 0;
     padding-bottom: 100%;
@@ -839,7 +839,7 @@ h5{
     display: block;
   }
   .block--text{
-    background-color: var(--colour-light-bluegrey); 
+    background-color: var(--colour-blue-2); 
     width: 100%;
     height: 0;
     padding-bottom: 100%;
