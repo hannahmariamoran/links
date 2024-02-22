@@ -28,6 +28,8 @@ html{
   --h4-line-height: 32px;
   --h5: 30px;
   --h5-line-height: 30px;
+  --h6: 28px;
+  --h6-line-height: 32px;
   --blockquote: 24px;
   --blockquote-line-height: 32px;
   --p: 16px;
@@ -79,6 +81,25 @@ h4:hover{
 }
 h4:active{
   color: var(--colour-blue);
+}
+h5{
+  color: var(--colour-beige);
+  font-family: "Mendl Sans";
+  font-size: var(--h5);
+  font-weight: 400;
+  text-align: center;
+}
+h6{
+  color: var(--colour-blue);
+  font-family: "Mendl Sans";
+  font-size: var(--h6);
+  font-weight: 400;
+  line-height: var(--h6-line-height);
+  border-top: solid 1px var(--colour-blue);
+  border-bottom: solid 1px var(--colour-blue);
+  padding: 4px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 p{
   color: var(--colour-black);
@@ -411,13 +432,6 @@ footer{
 .nowplaying{
   color: var(--colour-beige);
   font-weight: 300;
-}
-h5{
-  color: var(--colour-beige);
-  font-family: "Mendl Sans";
-  font-size: var(--h5);
-  font-weight: 400;
-  text-align: center;
 }
 /* ––––––– soundwave animation ––––––– */
 .soundwave{
