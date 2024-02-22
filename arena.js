@@ -136,7 +136,7 @@ let renderBlock = (block) => {
 				<li>
 					<div class="block">
 						<div class="block--audio">
-						<audio controls src="${ block.attachment.url }"></audio>
+							<div class="audio-player"><audio controls src="${ block.attachment.url }"></audio></div>
 						</div>
 						<h3 class="block-curator">Curated by<br>${block.connected_by_username}</h3>
 					</div>
