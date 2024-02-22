@@ -165,65 +165,71 @@ nav {
   padding: 20px;
   z-index: 1;
 }
-/* ========== intro section ========== */
-.intro-section{
-  margin-top: 100px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-  grid-auto-rows: minmax(100px, auto);
-}
-.intro-image {
-  grid-column: 1 / span 4; 
-  grid-row: 1;
-  max-width: 75vw;
-}
-.intro-image:hover{
-  transform: rotate(-15deg);
-  transition: transform 0.5s ease-in-out;
-}
-.collab-text-position {
-  grid-column: 3 / span 4; 
-  grid-row: 1;
-  z-index: 1; 
-}
-aside {
-	transition: all 3s ease-in-out; 
-	will-change: transform; 
-  opacity: 0%;
-}
-aside.highlight { 
-  opacity: 100%;
-}
-#channel-description {
-  margin-top: 100px;
-  grid-column: 1 / span 4; 
-  grid-row: 2;
-}
-/* ========== archive section ========== */
-.archive-section{
-  margin-top: 80px;
+/* ============== player ============== */
+.player{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 12px;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 12px;
-  /* border-bottom: solid 1px var(--colour-blue); */
+  width: 100%;
+  max-width: 355px;
+  height: 150px;
+  margin: auto;
+  margin-top: 200px;
+  align-items: flex-end;
 }
-.horizontal-line {
-  border: solid 0.5px var(--colour-blue);
-  width: 40px;
+.player li {
+  margin-bottom: 0px;
 }
-.square {
-  width: 20px; 
-  height: 20px;
-  background-color: var(--colour-blue); 
+.playerblock{
+  background-color: var(--colour-grey);
+  border: solid 1px var(--colour-blue);
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 5px;
 }
-.archive-title{
-  text-align: center;
+.playerblock li{
+  margin-bottom: 0px;
 }
-/* =============== block styling =============== */
+.upnext{
+  text-align: end;
+}
+.nowplaying{
+  color: var(--colour-beige);
+  font-weight: 300;
+}
+/* ==== soundwave animation ==== */
+.soundwave{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+}
+.soundwave::before{
+  content: 'aaaaaaaaaaaaa';
+  position: absolute;
+  top: -46px;
+  left: 0;
+  color: transparent;
+  font-size: 4em;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--colour-blue);
+  text-decoration-line: underline;
+  animation: animate 1s linear infinite;
+}
+@keyframes animate 
+{
+  0%{
+    transform: translateX(-1px);
+  }
+  100%{
+    transform: translateX(-57px);
+  }
+}
+/* =================== block styling =================== */
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -284,7 +290,7 @@ li{
 .block--image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* so the image covers the entire block without being distorted */
+  object-fit: cover; 
   position: absolute;
   top: 0;
   left: 0;
@@ -326,7 +332,7 @@ audio{
 .block--videolinked iframe{
   width: 100%;
   height: 100%;
-  object-fit: cover; /* so the image covers the entire block without being distorted */
+  object-fit: cover; 
   position: absolute;
   top: 0;
   left: 0;
@@ -346,24 +352,6 @@ audio{
   width: 100%;
   padding: 12px;
   position: absolute;
-}
-/* ====== more info ====== */
-.block-curator{
-  padding-top: 12px;
-  padding-left: 12px;
-  grid-column: 1 / span 2; 
-  border-left: solid 1px var(--colour-blue); 
-  border-top: solid 1px var(--colour-blue);
-  width: 200px;
-}
-button{
-  padding-top: 12px;
-  padding-left: 12px;
-  grid-column: 1 / span 2; 
-  border-left: solid 1px var(--colour-blue); 
-  border-top: solid 1px var(--colour-blue);
-  width: 200px;
-  cursor: pointer;
 }
 /* ========== grayscale/hover styling ========== */
 img{
@@ -397,70 +385,7 @@ footer{
   padding-top: 12px;
   margin-top: 120px;
 }
-/* ––––––– player animation ––––––– */
-.player{
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 355px;
-  height: 150px;
-  margin: auto;
-  margin-top: 200px;
-  align-items: flex-end;
-}
-.player li {
-  margin-bottom: 0px;
-}
-.playerblock{
-  background-color: var(--colour-grey);
-  border: solid 1px var(--colour-blue);
-  width: 100%;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 12px;
-  border-radius: 5px;
-}
-.playerblock li{
-  margin-bottom: 0px;
-}
-.upnext{
-  text-align: end;
-}
-.nowplaying{
-  color: var(--colour-beige);
-  font-weight: 300;
-}
-/* ––––––– soundwave animation ––––––– */
-.soundwave{
-  position: relative;
-  width: 100%;
-  height: 40px;
-  overflow: hidden;
-}
-.soundwave::before{
-  content: 'aaaaaaaaaaaaa';
-  position: absolute;
-  top: -46px;
-  left: 0;
-  color: transparent;
-  font-size: 4em;
-  text-decoration-style: wavy;
-  text-decoration-color: var(--colour-blue);
-  text-decoration-line: underline;
-  animation: animate 1s linear infinite;
-}
-@keyframes animate 
-{
-  0%{
-    transform: translateX(-1px);
-  }
-  100%{
-    transform: translateX(-57px);
-  }
-}
+/* ========== grey text class ========== */
 .grey-text{
   color: var(--colour-grey);
 }
@@ -507,38 +432,13 @@ footer{
   .options{
     padding: 32px;
   }
-  /* ========== intro section ========== */
-  .intro-section{
-    margin-top: 120px;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: 20px;
-    grid-auto-rows: minmax(100px, auto);
+  /* =========== player =========== */
+  .player{
+    height: 162px;
   }
-  .intro-image {
-    opacity: 50%;
-    grid-column: 5 / span 4; 
-    grid-row: 1 / span 4;
-    max-width: 45vw;
-  }
-  .collab-text-position {
-    grid-column: 2 / span 8; 
-    grid-row: 4;
-    max-width: 62vw;
-  }
-  #channel-description {
-    grid-column: 2 / span 5; 
-    grid-row: 4;
-  }
-  /* ========== archive section ========== */
-  .archive-section{
-    margin-top: 40px;
-    gap: 12px;
-    justify-content: right;
-  }
-  .horizontal-line {
-    border: solid 0.5px var(--colour-blue);
-    width: 30px;
+  .playerblock{
+    height: 162px;
+    gap: 16px;
   }
   /* =============== block styling =============== */
   .container{
@@ -648,14 +548,6 @@ footer{
     padding-top: 16px;
     margin-top: 180px;
   }
-  /* ––––––– player animation ––––––– */
-  .player{
-    height: 162px;
-  }
-  .playerblock{
-    height: 162px;
-    gap: 16px;
-  }
 }
 
 /* ================================== desktop media query ================================== */
@@ -700,45 +592,13 @@ footer{
   .options{
     padding: 40px;
   }
-  /* ========== intro section ========== */
-  .intro-section{
-    margin-top: 140px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 20px;
-    grid-auto-rows: minmax(100px, auto);
+   /* ========== player ========== */
+  .player{
+    height: 162px;
   }
-  .intro-image {
-    opacity: 50%;
-    grid-column: 6 / span 8; 
-    grid-row: 1 / span 6;
-    width: 33vw;
-  }
-  .collab-text-position {
-    grid-column: 3 / span 5; 
-    grid-row: 5;
-  }
-  #channel-description {
-    grid-column: 3 / span 6; 
-    grid-row: 6;
-  }
-  /* ========== archive section ========== */
-  .archive-section{
-    width: 300px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 40px;
-    justify-content: right;
-    padding: 12px;
-    border: solid 1px;
-  }
-  .horizontal-line {
-    border: solid 0.5px var(--colour-blue);
-    width: 45px;
-  }
-  .square {
-    width: 24px; 
-    height: 24px;
+  .playerblock{
+    height: 162px;
+    gap: 16px;
   }
   /* =============== block styling =============== */
   .container{
@@ -851,23 +711,4 @@ footer{
     padding-top: 20px;
     margin-top: 240px;
   }
- /* ––––––– player animation ––––––– */
- .player{
-  height: 162px;
-}
-.playerblock{
-  height: 162px;
-  gap: 16px;
-}
-}
-
-/* trying to style buttons */
-.block--image__description{
-  display: none;
-  position: fixed;
-}
-
-.block--image:active .block--image__description{
-  display: block;
-
 }
