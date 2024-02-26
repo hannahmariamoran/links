@@ -46,7 +46,7 @@ html{
 
 /* ========== type styling ========== */
 h1{
-  font-family: "Mendl Sans";
+  font-family: "mendl-sans-dusk";
   font-size: var(--h1);
   line-height: var(--h1-line-height);
   font-weight: 300;
@@ -56,7 +56,7 @@ h1{
 }
 h2{
   color: var(--colour-grey);
-  font-family: "Mendl Sans";
+  font-family: "mendl-sans-dusk";
   font-size: var(--h2);
   font-weight: 300;
   line-height: var(--h2-line-height);
@@ -70,7 +70,7 @@ h3{
 }
 h4{
   color: var(--colour-grey);
-  font-family: "Mendl Sans";
+  font-family: "mendl-sans-dusk";
   font-size: var(--h4);
   font-weight: 300;
   line-height: var(--h4-line-height);
@@ -85,14 +85,14 @@ h4:active{
 }
 h5{
   color: var(--colour-beige);
-  font-family: "Mendl Sans";
+  font-family: "mendl-sans-dusk";
   font-size: var(--h5);
   font-weight: 400;
   text-align: center;
 }
 h6{
   color: var(--colour-blue);
-  font-family: "Mendl Sans";
+  font-family: "mendl-sans-dusk";
   font-size: var(--h6);
   font-weight: 400;
   line-height: var(--h6-line-height);
