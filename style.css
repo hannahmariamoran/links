@@ -40,7 +40,7 @@ html{
 
 /* ========== type styling ========== */
 h1{
-  font-family: "mendl-sans-dusk";
+  font-family: "mendl-sans-dawn";
   font-size: var(--h1);
   line-height: var(--h1-line-height);
   font-weight: 300;
