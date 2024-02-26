@@ -198,6 +198,8 @@ h5{
   width: 100%;
   height: 40px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 .soundwave::before{
   content: 'aaaaaaaaaaaaa';
@@ -801,4 +803,17 @@ footer{
     padding-top: 20px;
     margin-top: 240px;
   }
+}
+
+/* New Player Styling */
+#player {
+  display: flex;
+  justify-content: center;
+}
+
+.new-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

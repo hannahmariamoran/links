@@ -25,23 +25,15 @@
         <a href="compose.html">COMPOSE ↗︎</a>
     </div>
 	<main>
-        <ul class="player">
+        <!-- New Player -->
+        <ul class="new-player">
+            <li id="player">
+            <script src="./player.js" type="module"></script>
+            </li>
             <li>
-                <ul class="playerblock">
-                    <li>
-                        <p class="nowplaying">NOW PLAYING:</p>
-                    </li>
-                    <li>
-                        <h5>BLEND</h5>
-                    </li>
-                    <li>
-                        <div class="soundwave"></div>
-                    </li>
-                </ul>
+                <div class="soundwave"></div>
             </li>
-            <li class="upnext">
-                <a href="compose.html">UP NEXT: COMPOSE ↗︎</a>
-            </li>
+        </div>
         </ul>
         <div class="intro-section">
             <aside id="channel-description"></aside>
