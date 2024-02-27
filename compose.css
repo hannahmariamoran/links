@@ -268,7 +268,7 @@ h4:hover{
 }
 /* =================== block styling =================== */
 .container{
-  margin-top: 100px;
+  margin-top: 140px;
 }
 ul {
   display: grid;
@@ -498,7 +498,7 @@ footer{
   }
   /* =============== block styling =============== */
   .container{
-    margin-top: 110px;
+    margin-top: 200px;
   }
   ul {
     display: grid;
@@ -675,6 +675,9 @@ footer{
   /* =============== block styling =============== */
   .new-player{
     margin-bottom: 0px;
+  }
+  .container{
+    margin-top: 240px;
   }
   ul {
     display: grid;
