@@ -5,17 +5,17 @@ const player = d3
     
 const svg = player
     .append("svg")
-    .attr('viewBox', '0 0 600 400')
-    .attr('width', 550)
+    .attr('viewBox', '0 0 500 350')
+    .attr('width', 500)
     .attr('height', 350)
     .style('background', '#F9F5EE')
 
 const Base =  svg
     .append('rect')
-    .attr('width', 500)
-    .attr('height', 350)
-    .attr('x', 50)
-    .attr('y', 25)
+    .attr('width', 495)
+    .attr('height', 345)
+    .attr('x', 1)
+    .attr('y', 1)
     .attr('fill', '#F9F5EE')
     .attr('stroke', '#539FB0',) 
     .attr('stroke-width', 3)
@@ -27,24 +27,24 @@ const CircleOuter =  svg
     .append('ellipse')
     .attr('rx', 140)
     .attr('ry', 140)
-    .attr('cx', 310)
-    .attr('cy', 200)
+    .attr('cx', 250)
+    .attr('cy', 175)
     .attr('fill', '#539FB0');
 
 const CircleMiddle =  svg
     .append('ellipse')
     .attr('rx', 60)
     .attr('ry', 60)
-    .attr('cx', 310)
-    .attr('cy', 200)
+    .attr('cx', 250)
+    .attr('cy', 175)
     .attr('fill', '#F9F5EE');
 
 const CircleInner =  svg
     .append('ellipse')
     .attr('rx', 5)
     .attr('ry', 5)
-    .attr('cx', 310)
-    .attr('cy', 200)
+    .attr('cx', 250)
+    .attr('cy', 175)
     .attr('fill', '#539FB0');
 
 // creating the turn buttons
@@ -53,16 +53,16 @@ const TurnButtonOne =  svg
     .append('ellipse')
     .attr('rx', 15)
     .attr('ry', 15)
-    .attr('cx', 520)
-    .attr('cy', 345)
+    .attr('cx', 470)
+    .attr('cy', 285)
     .attr('fill', '#539FB0');
 
 const TurnButtonTwo =  svg
     .append('ellipse')
     .attr('rx', 15)
     .attr('ry', 15)
-    .attr('cx', 520)
-    .attr('cy', 305)
+    .attr('cx', 470)
+    .attr('cy', 320)
     .attr('fill', '#539FB0');
 
 // creating the needle arm
