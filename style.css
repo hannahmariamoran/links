@@ -100,8 +100,14 @@ a:hover{
   font-weight: 600;
 }
 
-/* 🚨 hiding channel title api for the purpose to show styling choices 🚨 */
+/* 🚨 hiding channel info to not break JS 🚨 */
 #channel-title{
+  display: none;
+}
+#channel-blocks{
+  display: none;
+}
+#channel-users{
   display: none;
 }
 
