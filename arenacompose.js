@@ -5,8 +5,6 @@ markdownIt.src = 'https://cdn.jsdelivr.net/npm/markdown-it@14.0.0/dist/markdown-
 document.head.appendChild(markdownIt)
 
 
-
-
 let channelSlug = 'the-jazz-tapestry' // The “slug” is just the end of the URL
 
 
@@ -61,15 +59,17 @@ let renderImageBlock = (block) => {
 
 
 	// Images!
-	if (block.class == 'Image') {
+	if (block.class == 'Image') { 
 		let imageItem =
 			`
-			<li>
-			<div class="block">	
+			<li class="block image-lightbox">
 				<figure class="block block--image">
 				<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
 				</figure>
-			</div>
+				<div class="block--image__description">
+				${block.description_html}
+				</div>
+				<button>Click here!</button>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
@@ -267,6 +267,15 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		let channelUsers = document.getElementById('channel-users') // Show them together
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
+
+		// Button // 
+		let switchButtons  = document.querySelectorAll('.image-lightbox button')
+		switchButtons.forEach((switchButton) => {
+			switchButton.onclick = () => { // Attach the event.
+				console.log(switchButton.parentElement)
+				// textBlock.classList.toggle(highlightClass) // Toggle the class!
+			};
+		})
 	})
 
 // –––––––––– Are.na description fading in on scroll up ––––––––––
@@ -285,3 +294,6 @@ let sectionObserver = new IntersectionObserver((entries) => {
 })
 
 sectionObserver.observe(highlightBlock) 
+
+
+

@@ -718,3 +718,19 @@ footer{
   }
 }
 
+.block--image__description{
+  display: none;
+}
+
+.block--image.active .block--image__description{
+  display: block;
+}
+
+button{
+  padding: .5em;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  border-radius: .5em;
+  margin-top: .5em;
+}
