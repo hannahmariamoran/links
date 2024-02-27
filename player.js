@@ -18,7 +18,7 @@ const Base =  svg
     .attr('y', 1)
     .attr('fill', '#F9F5EE')
     .attr('stroke', '#539FB0',) 
-    .attr('stroke-width', 3)
+    .attr('stroke-width', 2)
     .attr('rx', 30) 
     .attr('ry', 30); 
 
