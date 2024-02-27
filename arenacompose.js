@@ -278,22 +278,19 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		})
 	})
 
-// –––––––––– Are.na description fading in on scroll up ––––––––––
+// –––––––––– Content Title fading in on scroll up (demo from class) ––––––––––
 let highlightClass = 'highlight' 
-let highlightBlock = document.querySelector('aside')
+let highlightBlocks = document.querySelectorAll('h6') 
 
-// Set up an IntersectionObserver
-let sectionObserver = new IntersectionObserver((entries) => {
-	let [entry] = entries 
+highlightBlocks.forEach((highlightBlock) => {
+	let sectionObserver = new IntersectionObserver((entries) => {
+		let [entry] = entries
 
-	if (entry.isIntersecting) {
-		highlightBlock.classList.add(highlightClass)
-	} else {
-		highlightBlock.classList.remove(highlightClass)
-	}
+		if (entry.isIntersecting) {
+			highlightBlock.classList.add(highlightClass)
+		} else {
+			highlightBlock.classList.remove(highlightClass)
+		}
+	})
+		sectionObserver.observe(highlightBlock) 
 })
-
-sectionObserver.observe(highlightBlock) 
-
-
-

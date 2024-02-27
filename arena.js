@@ -214,7 +214,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		})
 	})
 
-// –––––––––– Are.na description fading in on scroll up ––––––––––
+// –––––––––– Are.na description fading in on scroll up (demo from class) ––––––––––
 let highlightClass = 'highlight' 
 let highlightBlock = document.querySelector('aside')
 

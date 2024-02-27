@@ -85,6 +85,12 @@ h6{
   padding-bottom: 8px;
   text-align: left;
   margin-bottom: 40px;
+  transition: all 2s ease-in-out; 
+	will-change: transform; 
+  opacity: 0%;
+}
+h6.highlight { 
+  opacity: 100%;
 }
 h6:hover{
   text-align: right;
