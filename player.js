@@ -53,16 +53,16 @@ const TurnButtonOne =  svg
     .append('ellipse')
     .attr('rx', 15)
     .attr('ry', 15)
-    .attr('cx', 470)
-    .attr('cy', 285)
+    .attr('cx', 465)
+    .attr('cy', 280)
     .attr('fill', '#539FB0');
 
 const TurnButtonTwo =  svg
     .append('ellipse')
     .attr('rx', 15)
     .attr('ry', 15)
-    .attr('cx', 470)
-    .attr('cy', 320)
+    .attr('cx', 465)
+    .attr('cy', 315)
     .attr('fill', '#539FB0');
 
 // creating the needle arm
