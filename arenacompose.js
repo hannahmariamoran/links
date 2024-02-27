@@ -274,7 +274,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 			switchButton.onclick = () => { // Attach the event.
 				console.log(switchButton.parentElement)
 				// textBlock.classList.toggle(highlightClass) // Toggle the class!
-			};
+			}
 		})
 	})
 
