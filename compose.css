@@ -29,8 +29,8 @@ html{
   --h4-line-height: 28px;
   --h5: 26px;
   --h5-line-height: 20px;
-  --h6: 28px;
-  --h6-line-height: 32px;
+  --h6: 26px;
+  --h6-line-height: 26px;
   --blockquote: 24px;
   --blockquote-line-height: 32px;
   --p: 16px;
@@ -76,15 +76,14 @@ h5{
   text-align: center;
 }
 h6{
-  color: var(--colour-blue);
-  font-family: "mendl-sans-dusk";
+  color: var(--colour-grey);
+  font-family: "Work Sans";
   font-size: var(--h6);
-  font-weight: 400;
+  font-weight: 300;
   line-height: var(--h6-line-height);
-  border-top: solid 1px var(--colour-blue);
-  border-bottom: solid 1px var(--colour-blue);
-  padding: 4px;
-  text-align: center;
+  border-bottom: solid 1.5px var(--colour-blue);
+  padding-bottom: 8px;
+  text-align: left;
   margin-bottom: 40px;
 }
 p{
@@ -259,6 +258,10 @@ h4:hover{
 .track-name{
   font-weight: 500;
   font-family: 'mendl-sans-dusk';
+}
+.track-title{
+  font-family: "mendl-sans-dusk";
+  font-weight: 500;
 }
 /* =================== block styling =================== */
 .container{
@@ -438,6 +441,8 @@ footer{
     --h4-line-height: 28px;
     --h5: 24px;
     --h5-line-height: 24px;
+    --h6: 28px;
+    --h6-line-height: 28px;
     --blockquote: 28px;
     --blockquote-line-height: 34px;
     --p: 16px;
@@ -458,6 +463,9 @@ footer{
   /* ========== type styling ========== */
   h1{
     text-align: right;
+  }
+  h6{
+    padding-bottom: 10px;
   }
   /* ========== nav styling ========== */
   nav {
@@ -609,6 +617,8 @@ footer{
     --h4-line-height: 48px;
     --h5: 24px;
     --h5-line-height: 34px;
+    --h6: 28px;
+    --h6-line-height: 28px;
     --blockquote: 28px;
     --blockquote-line-height: 34px;
     --p: 20px;
@@ -629,6 +639,9 @@ footer{
    /* ========== type styling ========== */
   h1{
     text-align: right;
+  }
+  h6{
+    padding-bottom: 10px;
   }
   /* ========== nav styling ========== */
   nav {
