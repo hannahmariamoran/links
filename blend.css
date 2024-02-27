@@ -264,6 +264,9 @@ li{
   font-weight: 300;
   padding: 20px;
 }
+.block--text:hover{
+  transform: rotate(-2deg);
+}
 /* ====== image blocks ====== */
 .block--image{
   width: 100%;
