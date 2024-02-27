@@ -25,24 +25,22 @@
         <a href="blend.html">BLEND ↗︎</a>
     </div>
 	<main>
-        <ul class="player">
-            <li>
-                <ul class="playerblock">
-                    <li>
-                        <p class="nowplaying">NOW PLAYING:</p>
-                    </li>
-                    <li>
-                        <h5>COMPOSE</h5>
-                    </li>
-                    <li>
-                        <div class="soundwave"></div>
-                    </li>
-                </ul>
-            </li>
-            <li class="upnext">
-                <a href="blend.html">UP NEXT: BLEND ↗︎</a>
-            </li>
-        </ul>
+        <div class="center-player">
+            <ul class="new-player">
+                <li id="player">
+                    <script src="./player.js" type="module"></script>
+                </li>
+                <li>
+                    <div class="soundwave"></div>
+                </li>
+                <li>
+                    <div class="player-text">
+                        <h5>PLAYING: COMPOSE</h5>
+                        <a href="blend.html"><h5>NEXT: BLEND ↗︎</h5></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
         <div class="intro-section">
             <aside id="channel-description"></aside>
         </div>

@@ -27,8 +27,8 @@ html{
   --h3-line-height: 22px;
   --h4: 28px;
   --h4-line-height: 32px;
-  --h5: 30px;
-  --h5-line-height: 30px;
+  --h5: 26px;
+  --h5-line-height: 20px;
   --h6: 28px;
   --h6-line-height: 32px;
   --blockquote: 24px;
@@ -74,11 +74,11 @@ h4{
   font-size: var(--h4);
   font-weight: 300;
   line-height: var(--h4-line-height);
+  transition: all 0.1s linear;
 }
 h4:hover{
   color: var(--colour-blue);
   font-weight: 500;
-  transition: 0.1s;
 }
 h4:active{
   color: var(--colour-blue);
@@ -166,53 +166,57 @@ nav {
   padding: 20px;
   z-index: 1;
 }
-/* ============== player ============== */
-.player{
+/* ========= player styling ========= */
+.center-player {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 355px;
-  height: 150px;
-  margin: auto;
-  margin-top: 200px;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
 }
-.player li {
-  margin-bottom: 0px;
-}
-.playerblock{
-  background-color: var(--colour-grey);
-  border: solid 1px var(--colour-blue);
-  width: 100%;
-  height: 150px;
+.new-player {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 12px;
-  border-radius: 5px;
+  gap: 20px;
+  transform: scale(67%);
 }
-.playerblock li{
-  margin-bottom: 0px;
+.player-text {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 8px;
 }
-.upnext{
-  text-align: end;
+
+/* ========= player text ========= */
+h5{
+  color: var(--colour-blue);
+  font-family: "Work Sans";
+  font-size: var(--h5);
+  font-weight: 400;
+  transition: all 0.1s linear;
 }
-.nowplaying{
-  color: var(--colour-beige);
-  font-weight: 300;
+h5:hover{
+  font-weight: 600;
 }
-/* ==== soundwave animation ==== */
+/* ======== soundwave animation ======== */
 .soundwave{
   position: relative;
-  width: 100%;
+  width: 495px;
   height: 40px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--colour-blue);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 10px;
 }
 .soundwave::before{
-  content: 'aaaaaaaaaaaaa';
+  content: 'aaaaaaaaaaaaaaaaaaaa';
   position: absolute;
-  top: -46px;
+  top: -49px;
   left: 0;
   color: transparent;
   font-size: 4em;
@@ -227,7 +231,7 @@ nav {
     transform: translateX(-1px);
   }
   100%{
-    transform: translateX(-57px);
+    transform: translateX(-70px);
   }
 }
 /* =================== block styling =================== */
@@ -403,8 +407,8 @@ footer{
     --h3-line-height: 22px;
     --h4: 28px;
     --h4-line-height: 33px;
-    --h5: 32px;
-    --h5-line-height: 32px;
+    --h5: 24px;
+    --h5-line-height: 24px;
     --blockquote: 28px;
     --blockquote-line-height: 34px;
     --p: 16px;
@@ -433,13 +437,12 @@ footer{
   .options{
     padding: 32px;
   }
-  /* =========== player =========== */
-  .player{
-    height: 162px;
+  /* ========= player styling ========= */
+  .center-player {
+    margin-top: 75px;
   }
-  .playerblock{
-    height: 162px;
-    gap: 16px;
+  .new-player {
+    transform: scale(75%);
   }
   /* =============== block styling =============== */
   .container{
@@ -563,7 +566,7 @@ footer{
     --h3-line-height: 24px;
     --h4: 36px;
     --h4-line-height: 48px;
-    --h5: 34px;
+    --h5: 24px;
     --h5-line-height: 34px;
     --blockquote: 28px;
     --blockquote-line-height: 34px;
@@ -593,13 +596,12 @@ footer{
   .options{
     padding: 40px;
   }
-   /* ========== player ========== */
-  .player{
-    height: 162px;
+ /* ========= player styling ========= */
+  .center-player {
+    margin-top: 100px;
   }
-  .playerblock{
-    height: 162px;
-    gap: 16px;
+  .new-player {
+    transform: scale(90%);
   }
   /* =============== block styling =============== */
   .container{
