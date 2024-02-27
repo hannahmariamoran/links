@@ -391,7 +391,7 @@ footer{
   align-items: left;
   border-top: solid 1px var(--colour-blue);
   padding-top: 12px;
-  margin-top: 120px;
+  margin-top: 180px;
 }
 /* ========== grey text class ========== */
 .grey-text{
@@ -553,7 +553,7 @@ footer{
   /* ========== footer ========== */
   footer{
     padding-top: 16px;
-    margin-top: 180px;
+    margin-top: 220px;
   }
 }
 
@@ -714,6 +714,6 @@ footer{
   /* ========== footer ========== */
   footer{
     padding-top: 20px;
-    margin-top: 240px;
+    margin-top: 300px;
   }
 }
