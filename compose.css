@@ -607,8 +607,11 @@ footer{
     transform: scale(90%);
   }
   /* =============== block styling =============== */
-  .container{
+  /* .container{
     margin-top: 250px;
+  } */
+  .new-player{
+    margin-bottom: 0px;
   }
   ul {
     display: grid;
