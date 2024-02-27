@@ -179,7 +179,7 @@ aside.highlight {
 footer{
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   border-top: solid 1px var(--colour-blue);
   padding-top: 12px;
   margin-top: 180px;

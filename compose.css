@@ -143,7 +143,7 @@ nav {
 .options{
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: space-between;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -414,7 +414,7 @@ iframe:hover{
 footer{
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   border-top: solid 1px var(--colour-blue);
   padding-top: 12px;
   margin-top: 180px;
