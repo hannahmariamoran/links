@@ -71,8 +71,8 @@ const Rectangle1 =  svg
     .append('rect')
     .attr('width', 30)
     .attr('height', 40)
-    .attr('x', 80)
-    .attr('y', 105)
+    .attr('x', 40)
+    .attr('y', 90)
     .attr('fill', '#539FB0')
     .attr('rx', 5) 
     .attr('ry', 5); 
@@ -81,8 +81,8 @@ const Rectangle2 =  svg
     .append('rect')
     .attr('width', 30)
     .attr('height', 40)
-    .attr('x', 80)
-    .attr('y', 305)
+    .attr('x', 40)
+    .attr('y', 290)
     .attr('fill', '#539FB0')
     .style('transform', 'rotate(-10deg)')
     .attr('rx', 5) 
@@ -95,9 +95,9 @@ const Line1 =  svg
     .attr('fill', 'none')
     .attr('stroke', '#539FB0',) 
     .attr('stroke-width', 6)
-    .attr("x1", 95)
+    .attr("x1", 55)
     .attr("y1", 130)
-    .attr("x2", 95)
+    .attr("x2", 55)
     .attr("y2", 202); 
 
 const Line2 =  svg
@@ -107,16 +107,16 @@ const Line2 =  svg
     .attr('fill', 'none')
     .attr('stroke', '#539FB0',) 
     .attr('stroke-width', 6)
-    .attr("x1", 95)
+    .attr("x1", 55)
     .attr("y1", 200)
-    .attr("x2", 145)
+    .attr("x2", 110)
     .attr("y2", 285); 
 
 const CircleOne =  svg
     .append('ellipse')
     .attr('rx', 12)
     .attr('ry', 12)
-    .attr('cx', 95)
+    .attr('cx', 55)
     .attr('cy', 165)
     .attr('fill', '#539FB0');
 
@@ -127,9 +127,9 @@ const Line3 =  svg
     .attr('fill', 'none')
     .attr('stroke', '#539FB0',) 
     .attr('stroke-width', 2)
-    .attr("x1", 120)
+    .attr("x1", 80)
     .attr("y1", 300)
-    .attr("x2", 145)
+    .attr("x2", 105)
     .attr("y2", 295); 
 
 
