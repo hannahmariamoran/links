@@ -46,7 +46,7 @@ html{
 
 /* ========== type styling ========== */
 h1{
-  font-family: "mendl-sans-dusk";
+  font-family: "mendl-sans-dawn";
   font-size: var(--h1);
   line-height: var(--h1-line-height);
   font-weight: 300;
@@ -235,12 +235,15 @@ h5:hover{
   }
 }
 /* =================== block styling =================== */
+.container{
+  margin-top: 100px;
+}
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   list-style: none;
   margin-bottom: 80px;
-  gap: 40px;
+  gap: 80px;
 }
 li{
   grid-column: 1 / span 4; 
@@ -446,7 +449,7 @@ footer{
   }
   /* =============== block styling =============== */
   .container{
-    margin-top: 100px;
+    margin-top: 110px;
   }
   ul {
     display: grid;
@@ -605,7 +608,7 @@ footer{
   }
   /* =============== block styling =============== */
   .container{
-    margin-top: 210px;
+    margin-top: 250px;
   }
   ul {
     display: grid;
