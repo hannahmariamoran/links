@@ -294,3 +294,4 @@ highlightBlocks.forEach((highlightBlock) => {
 	})
 		sectionObserver.observe(highlightBlock) 
 })
+
