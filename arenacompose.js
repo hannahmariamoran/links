@@ -267,23 +267,13 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		let channelUsers = document.getElementById('channel-users') // Show them together
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
-
-
-
-		// –––––––––– Button –––––––––– didn't end up working :/
-		let switchButtons = document.querySelectorAll ('button')
-		switchButtons.forEach((switchButton) =>{
-			switchButton.onclick = () => { // Attach the event.
-				switchButton.parentElement.classList.toggle('active') // Toggle the class!
-			};			
-		})
 	})
 
 // –––––––––– Are.na description fading in on scroll up ––––––––––
 let highlightClass = 'highlight' 
 let highlightBlock = document.querySelector('aside')
 
-// Set up an IntersectionObserver.
+// Set up an IntersectionObserver
 let sectionObserver = new IntersectionObserver((entries) => {
 	let [entry] = entries 
 
