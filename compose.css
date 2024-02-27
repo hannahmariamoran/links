@@ -25,8 +25,8 @@ html{
   --h2-line-height: 28px;
   --h3: 18px;
   --h3-line-height: 22px;
-  --h4: 28px;
-  --h4-line-height: 32px;
+  --h4: 22px;
+  --h4-line-height: 28px;
   --h5: 26px;
   --h5-line-height: 20px;
   --h6: 28px;
@@ -67,21 +67,6 @@ h3{
   font-size: var(--h3);
   font-weight: 400;
   line-height: var(--h3-line-height);
-}
-h4{
-  color: var(--colour-grey);
-  font-family: "mendl-sans-dusk";
-  font-size: var(--h4);
-  font-weight: 300;
-  line-height: var(--h4-line-height);
-  transition: all 0.1s linear;
-}
-h4:hover{
-  color: var(--colour-blue);
-  font-weight: 500;
-}
-h4:active{
-  color: var(--colour-blue);
 }
 h5{
   color: var(--colour-beige);
@@ -233,6 +218,47 @@ h5:hover{
   100%{
     transform: translateX(-70px);
   }
+}
+/* =================== tracklist =================== */
+.tracklist{
+  display: flex;
+  max-width: 335px;
+  flex-direction: column;
+  border: 1.5px solid var(--colour-blue);
+  padding: 12px;
+  gap: 12px;
+  border-radius: 10px;
+  margin-bottom: 100px;
+  margin: auto;
+}
+.track{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.play-button{
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 18px solid var(--colour-blue);
+	border-bottom: 10px solid transparent;
+  border-radius: 2px;
+}
+h4{
+  color: var(--colour-grey);
+  font-family: "Work Sans";
+  font-size: var(--h4);
+  font-weight: 300;
+  line-height: var(--h4-line-height);
+  transition: all 0.1s linear;
+}
+h4:hover{
+  color: var(--colour-blue);
+}
+.track-name{
+  font-weight: 500;
+  font-family: 'mendl-sans-dusk';
 }
 /* =================== block styling =================== */
 .container{
@@ -408,8 +434,8 @@ footer{
     --h2-line-height: 28px;
     --h3: 18px;
     --h3-line-height: 22px;
-    --h4: 28px;
-    --h4-line-height: 33px;
+    --h4: 24px;
+    --h4-line-height: 28px;
     --h5: 24px;
     --h5-line-height: 24px;
     --blockquote: 28px;
@@ -446,6 +472,18 @@ footer{
   }
   .new-player {
     transform: scale(75%);
+  }
+  /* =================== tracklist =================== */
+  .tracklist{
+    max-width: 375px;
+    gap: 16px;
+    padding: 16px;
+    margin-top: -40px;
+  }
+  .play-button{
+    border-top: 12px solid transparent;
+    border-left: 20px solid var(--colour-blue);
+    border-bottom: 12px solid transparent;
   }
   /* =============== block styling =============== */
   .container{
@@ -567,7 +605,7 @@ footer{
     --h2-line-height: 40px;
     --h3: 20px;
     --h3-line-height: 24px;
-    --h4: 36px;
+    --h4: 28px;
     --h4-line-height: 48px;
     --h5: 24px;
     --h5-line-height: 34px;
@@ -605,6 +643,18 @@ footer{
   }
   .new-player {
     transform: scale(90%);
+  }
+  /* =================== tracklist =================== */
+  .tracklist{
+    max-width: 450px;
+    gap: 12px;
+    padding: 16px;
+    margin-top: 150px;
+  }
+  .play-button{
+    border-top: 14px solid transparent;
+    border-left: 24px solid var(--colour-blue);
+    border-bottom: 14px solid transparent;
   }
   /* =============== block styling =============== */
   /* .container{
