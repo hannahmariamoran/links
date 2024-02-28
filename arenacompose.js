@@ -59,10 +59,14 @@ let renderImageBlock = (block) => {
 	if (block.class == 'Image') { 
 		let imageItem =
 			`
-			<li class="block image-lightbox">
+			<li>
+			<div class="block">	
+			<a href="${block.image.original.url}">
 				<figure class="block block--image">
 				<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
 				</figure>
+			</a>
+			</div>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
