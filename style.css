@@ -238,10 +238,6 @@ footer{
   /* ========== intro section ========== */
   .intro-section{
     margin-top: 120px;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: 20px;
-    grid-auto-rows: minmax(100px, auto);
   }
   .intro-image {
     opacity: 50%;
@@ -309,13 +305,9 @@ footer{
   /* ========== intro section ========== */
   .intro-section{
     margin-top: 140px;
-    display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 20px;
-    grid-auto-rows: minmax(100px, auto);
   }
   .intro-image {
-    opacity: 50%;
     grid-column: 6 / span 6; 
     grid-row: 1 / span 6;
   }
