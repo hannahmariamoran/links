@@ -63,10 +63,6 @@ let renderImageBlock = (block) => {
 				<figure class="block block--image">
 				<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
 				</figure>
-				<div class="image-lightbox-description">
-				${block.description_html}
-				</div>
-				<button>Click here!</button>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
@@ -242,16 +238,6 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		data.contents.reverse().forEach((block) => {
 			// console.log(block) // The data for a single block
 			renderAudioBlock(block) // Pass the single block data to the render function
-		})
-
-		// Button // 
-		let switchButtons = document.querySelectorAll('.image-lightbox button')
-		console.log(switchButtons)
-		switchButtons.forEach((switchButton) => {
-			switchButton.onclick = () => { // Attach the event.
-				let parentBlock = switchButton.parentElement
-				parentBlock.parentElement.classList.toggle('active') // Toggle the class!
-			}
 		})
 		
 	})

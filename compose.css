@@ -793,25 +793,3 @@ footer{
   }
 }
 
-.image-lightbox-description{
-  display: none; 
-
-  position: fixed;
-  color: white;
-  background-color: blue;
-  pad: 1em;
-  inset: 1em;
-}
-
-.active .image-lightbox-description {
-  display: block;
-}
-
-button{
-  padding: .5em;
-  color: white;
-  background-color: black;
-  cursor: pointer;
-  border-radius: .5em;
-  margin-top: .5em;
-}
