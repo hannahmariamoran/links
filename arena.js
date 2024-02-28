@@ -181,14 +181,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 			renderBlock(block) // Pass the single block data to the render function
 		})
 
-		// –––––––––– Button –––––––––– didn't end up working :/
-		let switchButtons = document.querySelectorAll ('button')
-		switchButtons.forEach((switchButton) =>{
-			switchButton.onclick = () => { // Attach the event.
-				switchButton.parentElement.classList.toggle('active') // Toggle the class!
-			};			
-		})
-	})
+})
 
 // –––––––––– Are.na description fading in on scroll up (demo from class) ––––––––––
 let highlightClass = 'highlight' 
