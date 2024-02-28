@@ -6,6 +6,7 @@ document.head.appendChild(markdownIt)
 
 let channelSlug = 'the-jazz-tapestry' // The “slug” is just the end of the URL
 
+
 // First, let’s lay out some *functions*, starting with our basic metadata:
 let placeChannelInfo = (data) => {
 	// Target some elements in your HTML:
@@ -53,9 +54,11 @@ let renderBlock = (block) => {
 			`
 			<li>
 			<div class="block">	
+			<a href="${block.image.original.url}">
 				<figure class="block block--image">
 				<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
 				</figure>
+			</a>
 			</div>
 			</li>
 			`
