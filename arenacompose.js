@@ -63,7 +63,7 @@ let renderImageBlock = (block) => {
 				<figure class="block block--image">
 				<img src="${block.image.large.url}" alt="${block.title} by ${block.user.full-name}">
 				</figure>
-				<div class="block--image__description">
+				<div class="image-lightbox-description">
 				${block.description_html}
 				</div>
 				<button>Click here!</button>
@@ -245,14 +245,17 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		})
 
 		// Button // 
-		let switchButtons  = document.querySelectorAll('.image-lightbox button')
+		let switchButtons = document.querySelectorAll('.image-lightbox button')
+		console.log(switchButtons)
 		switchButtons.forEach((switchButton) => {
 			switchButton.onclick = () => { // Attach the event.
-				console.log(switchButton.parentElement)
-				// textBlock.classList.toggle(highlightClass) // Toggle the class!
+				let parentBlock = switchButton.parentElement
+				parentBlock.parentElement.classList.toggle('active') // Toggle the class!
 			}
 		})
+		
 	})
+	
 
 // –––––––––– Content Title fading in on scroll up (demo from class) ––––––––––
 let highlightClass = 'highlight' 

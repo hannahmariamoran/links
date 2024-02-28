@@ -793,11 +793,17 @@ footer{
   }
 }
 
-.block--image__description{
-  display: none;
+.image-lightbox-description{
+  display: none; 
+
+  position: fixed;
+  color: white;
+  background-color: blue;
+  pad: 1em;
+  inset: 1em;
 }
 
-.block--image.active .block--image__description{
+.active .image-lightbox-description {
   display: block;
 }
 
