@@ -255,6 +255,7 @@ li{
   padding-bottom: 100%;
   overflow: hidden;
   display: block;
+  transition: all 0.1s linear;
 }
 .block--text p{
   color: var(--colour-grey);
@@ -275,6 +276,10 @@ li{
   overflow: hidden;
   display: block;
   position: relative;
+  transition: all 0.1s linear;
+}
+.block--image:hover{
+  transform: rotate(2deg);
 }
 .block--image img {
   width: 100%;
